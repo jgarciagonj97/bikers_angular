@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 <<<<<<< HEAD
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 =======
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -16,7 +17,8 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
 <<<<<<< HEAD
     PrincipalComponent,
-HomeComponent
+HomeComponent,
+BuscadorComponent
 =======
     LoginComponent,
     RegisterComponent
