@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 <<<<<<< HEAD
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
+import { SoporteComponent } from './soporte/soporte.component';
+import { PerfilComponent } from './perfil/perfil.component';
 =======
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -16,7 +18,9 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
 <<<<<<< HEAD
     PrincipalComponent,
-HomeComponent
+HomeComponent,
+SoporteComponent,
+PerfilComponent
 =======
     LoginComponent,
     RegisterComponent
