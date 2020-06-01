@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 <<<<<<< HEAD
 import { PrincipalComponent } from './principal/principal.component';
+import { HomeComponent } from './home/home.component';
 =======
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -14,7 +15,8 @@ import { RegisterComponent } from './register/register.component';
   declarations: [
     AppComponent,
 <<<<<<< HEAD
-    PrincipalComponent
+    PrincipalComponent,
+HomeComponent
 =======
     LoginComponent,
     RegisterComponent
