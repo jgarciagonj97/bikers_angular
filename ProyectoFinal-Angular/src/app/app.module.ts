@@ -6,8 +6,12 @@ import { AppComponent } from './app.component';
 <<<<<<< HEAD
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { BlogComponent } from './blog/blog.component';
 import { PostComponent } from './post/post.component';
+=======
+import { BuscadorComponent } from './buscador/buscador.component';
+>>>>>>> ad54a857bc3188b5329c2b26bbd7dff376765f55
 =======
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -19,8 +23,12 @@ import { RegisterComponent } from './register/register.component';
 <<<<<<< HEAD
     PrincipalComponent,
 HomeComponent,
+<<<<<<< HEAD
 BlogComponent,
 PostComponent
+=======
+BuscadorComponent
+>>>>>>> ad54a857bc3188b5329c2b26bbd7dff376765f55
 =======
     LoginComponent,
     RegisterComponent
