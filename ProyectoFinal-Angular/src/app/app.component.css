@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 h1,
@@ -45,6 +46,7 @@ header {
 .nav_menu li a:hover {
   color: #00ccff;
 }
+
 button{
   padding: 9px 25px;  
   background-color: rgb(15, 183, 224);
@@ -54,6 +56,31 @@ button{
   transition: all 0.3s ease 0s;
   margin-left: auto;
 }
+
 button:hover{
-    background-color: rgba(15,183,224,0.8);;
+  background-color: rgba(15,183,224,0.8);;
+}
+
+.footer{
+ background-color: #24252A;
+}
+
+.redes{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.footer ul{
+  display: flex;
+}
+
+li i{
+  color:rgb(24, 161, 216);
+  font-size: 32px;
+  cursor: pointer;
+  margin-left: 8em;
+}
+
+.footer-copyright{
+  color: white;
 }
