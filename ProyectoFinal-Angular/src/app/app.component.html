@@ -1,18 +1,18 @@
 <div class="container-fluid">
   <header>
     <!-- Menu de navegacion -->
-   
-   <img class="logo" src="assets/img/logo_size_invert.jpg">
-   <!--  <h1 class="logo">BIKERS</h1> -->
+
+    <img class="logo" src="assets/img/logo_size_invert.jpg" [routerLink]="['/home']">
+    <!--  <h1 class="logo">BIKERS</h1> -->
     <nav>
       <ul class="nav_menu">
-        <li><a href="">BLOG</a></li>
-        <li><a href="">BUSCADOR</a></li>
-        <li><a href="">PERFIL</a></li>
+        <li><a [routerLink]="['/blog']">BLOG</a></li>
+        <li><a [routerLink]="['/browser']">BUSCADOR</a></li>
+        <li><a [routerLink]="['/profile']">PERFIL</a></li>
       </ul>
 
     </nav>
-    <a class="contact" href="#"><button>Contacto</button> </a>
+    <a class="contact" [routerLink]="['/support']"><button>Contacto</button> </a>
   </header>
 
   <!-- main -->
@@ -24,22 +24,21 @@
   <footer class="footer">
     <div class="redes">
       <ul>
-        <li><a href="https://www.linkedin.com/in/javier-garcia-gonjal" target="_blank"><i
+        <li class="mt-3"><a href="https://www.linkedin.com/in/javier-garcia-gonjal" target="_blank"><i
               class="fab fa-linkedin"></i></a>
           <p>Javier García</p>
         </li>
-        <li><a href="https://www.linkedin.com/in/jonathanlopezhernandez/" target="_blank"><i
+        <li class="mt-3"><a href="https://www.linkedin.com/in/jonathanlopezhernandez/" target="_blank"><i
               class="fab fa-linkedin segundo"></i></a>
           <p>Jonathan López</p>
         </li>
-        <li><a href="https://www.linkedin.com/in/ivan-gm/" target="_blank"><i class="fab fa-linkedin tercero"></i></a>
+        <li class="mt-3"><a href="https://www.linkedin.com/in/ivan-gm/" target="_blank"><i
+              class="fab fa-linkedin tercero"></i></a>
           <p>Iván García</p>
         </li>
       </ul>
     </div>
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a> Enlacepag.com</a>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright
     </div>
   </footer>
 </div>
-
