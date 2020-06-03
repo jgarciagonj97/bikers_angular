@@ -1,7 +1,6 @@
- .container{
-     
-     
- }
- .row{
-     margin: 0 auto;
- }
+.card-header {
+    background-color: #24252A;
+}
+.card-header h2 button{
+color: white ;
+}
