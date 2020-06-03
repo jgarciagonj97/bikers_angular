@@ -20,7 +20,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px 10%;
+  padding: 10px 10%;
 }
 
 .logo {
@@ -34,7 +34,7 @@ header {
 
 .nav_menu li {
   display: inline-block;
-  padding: 0px 40px;
+  padding: 0px 100px;
   
 
 }
