@@ -12,4 +12,6 @@ export class SoporteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
+ 
