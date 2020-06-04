@@ -1,30 +1,53 @@
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6 login-section-wrapper">
-        <div class="brand-wrapper">
-          <img src="assets/img/logo_size.jpg" alt="logo" class="logo">
-        </div>
-        <div class="login-wrapper my-auto">
-          <h1 class="login-title">Log in</h1>
-          <form action="">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com">
-            </div>
-            <div class="form-group mb-4">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" class="form-control" placeholder="enter your passsword">
-            </div>
-            <input name="login" id="login" class="btn btn-block login-btn" type="button" value="Login">
-          </form>
-          <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
-          <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p> -->
-        </div>
+  <div class="row">
+    <div class="col-sm-6 login-section-wrapper">
+      <div class="brand-wrapper">
+        <img src="assets/img/logo_size.jpg" alt="logo" class="logo">
       </div>
-      <div class="col-sm-6 px-0 d-none d-sm-block">
-        <img src="assets/img/background.jpg" alt="login image" class="login-img">
+      <div class="login-wrapper my-auto">
+        <h1 class="login-title">Registrate</h1>
+        <form action="">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Introduce tu nombre">
+          </div>
+          <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Introduce tus apellidos">
+          </div>
+          <div class="form-group mb-4">
+            <label for="fecha_nacimiento">Fecha de nacimiento </label>
+            <input type="date" name="fecha_nacimiento" min="2018-03-25" max="2020-05-25" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Introduce tu email, ej: email@example.com">
+          </div>
+          <div class="form-group mb-4">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control"
+              placeholder="Introduce una contraseña">
+          </div>
+          <div class="form-group mb-4">
+            <label for="r_password">Repite Password</label>
+            <input type="password" name="r_password" id="r_password" class="form-control"
+              placeholder="Introduce una contraseña">
+          </div>
+          <div class="form-group mb-4">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" name="ciudad" id="ciudad" class="form-control" placeholder="Introduce la ciudad donde vives">
+          </div>
+
+          <input name="login" id="login" class="btn btn-block login-btn" type="button" value="Login">
+        </form>
+        <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
+          <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p> -->
       </div>
     </div>
+    <div class="col-sm-6 px-0 d-none d-sm-block">
+      <img src="assets/img/background.jpg" alt="login image" class="login-img">
+    </div>
   </div>
+</div>
 
-  
+<!-- nombre apellidos email password repite_password fecha_registro ciudad fecha de nacimiento -->
