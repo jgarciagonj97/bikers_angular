@@ -16,7 +16,7 @@ export class SoporteComponent implements OnInit {
   onClick($event) {
     $('#collapseOne').toggle(300);
     $('#collapseTwo').hide(300);
-    $('#collapseThree').hide(300); 
+    $('#collapseThree').hide(300);
   }
   onClick2($event) {
     $('#collapseOne').hide(300)
