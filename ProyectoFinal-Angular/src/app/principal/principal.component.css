@@ -1,0 +1,40 @@
+.grupo {
+    
+    padding: 0 ;
+
+}
+.grupo li a{
+    list-style: none;
+    text-decoration: none;
+    color:azure;
+    font-size: 20px;
+    font-weight: bold;
+}
+.grupo li {
+    display: block;
+    
+    padding: 15px;
+    background-color: #25232A;
+    color: aqua;
+    float: left ;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+}
+
+.grupo li:hover{
+   
+  background-color: rgb(80, 75, 94);
+    color: #25232A;
+  
+    
+}
+.boton .activo  li {
+    background-color: aqua;
+}
+
+.content > div:last-child{
+    display: none;
+}

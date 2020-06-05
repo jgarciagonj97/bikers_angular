@@ -1,1 +1,16 @@
-<p>principal works!</p>
+<div class="form">
+    <ul class="grupo">
+        <li class="boton" (click)="mostrarOcultar()"><a href="#register" >REGISTRATE</a></li>
+        <li class="boton" (click)="mostrarOcultar()"><a href="#login">INICIA SESION</a></li>
+    </ul>
+
+    <div class="content">
+        <div id="register" *ngIf="mostrar">
+            <app-register></app-register>
+        </div>
+        <div id="login" *ngIf="mostrar"> 
+            <app-login></app-login>
+        </div>
+    </div>
+
+</div>
