@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PrincipalComponent } from './componentes/principal/principal.component';
-import { PostComponent } from './componentes/post/post.component';
-import { BlogComponent } from './componentes/blog/blog.component';
-import { HomeComponent } from './componentes/home/home.component';
-import { BuscadorComponent } from './componentes/buscador/buscador.component';
-import { SoporteComponent } from './componentes/soporte/soporte.component';
-import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { PrincipalComponent } from '../app/componentes/principal/principal.component';
+import { PostComponent } from '../app/componentes/post/post.component';
+import { BlogComponent } from '../app/componentes/blog/blog.component';
+import { HomeComponent } from '../app/componentes/home/home.component';
+import { BuscadorComponent } from '../app/componentes/buscador/buscador.component';
+import { SoporteComponent } from '../app/componentes/soporte/soporte.component';
+import { PerfilComponent } from '../app/componentes/perfil/perfil.component';
 
 
 const routes: Routes = [
