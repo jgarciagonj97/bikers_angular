@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { $ as jQuery } from 'node_modules/jquery';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-soporte',
@@ -8,9 +9,23 @@ import { $ as jQuery } from 'node_modules/jquery';
 })
 export class SoporteComponent implements OnInit {
 
-  constructor() { }
+  formContacto: FormGroup;
+
+  constructor() {
+    this.formContacto = new FormGroup({
+      nombre: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      motivoConsulta: new FormControl('', Validators.required),
+      consulta: new FormControl('', Validators.required)
+    });
+   }
 
   ngOnInit(): void {
+  }
+
+
+  onSubmit(){
+    //Enviar email a la dirección de contacto que creemos.
   }
 
   onClick($event) {
@@ -27,6 +42,5 @@ export class SoporteComponent implements OnInit {
     $('#collapseOne').hide(300);
     $('#collapseTwo').hide(300);
     $('#collapseThree').toggle(300);
-
   }
 }
