@@ -1,0 +1,81 @@
+<div class="container mt-5 mb-5">
+    <h3 class="mb-3">Preguntas frecuentes</h3>
+    <div class="accordion" id="accordion1">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button id="1" class="btn  btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                        (click)="onClick($event)">
+                        ¿Cómo encuentro amigos?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion1">
+                <div class="card-body">
+                    Para buscar y añadir amigos deber dirigirte a la pestaña buscador y escribir el nombre o el nombre
+                    de usuario de la persona que deseas encontrar.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                        (click)="onClick2($event)">
+                        ¿Cómo escribo un artículo en el blog?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion1">
+                <div class="card-body">
+                    Solamente pueden escribir entradas en el blog determinados usuarios con servicios privilegiados.
+                    Para comprobar si puedes pertenecer al colectivo de usuarios que pueden escribir en el blog, rellena
+                    el cuestionario de contacto y en breve nos pondremos en contacto contigo.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                        (click)="onClick3($event)">
+                        Como modificar mis datos de perfil
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion1">
+                <div class="card-body">
+                    Para modificar los datos de tu perfil solamente tienes que dirigirte a la sección <u>perfil</u>. Ahí
+                    encontrarás todos tus datos, simplemente modifica el campo que desees y pulsa en guardar.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <h3 class="mt-5 mb-5">¡Envíanos tu consulta!</h3>
+    </div>
+    <form [formGroup]="formContacto" (ngSubmit)="onSubmit()">
+        <div class="form-group col-md-6 d-inline-block">
+            <label>Nombre</label>
+            <input type="text" class="form-control" formControlName="nombre">
+        </div>
+        <div class="form-group col-md-6 d-inline-block">
+            <label>Email</label>
+            <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="form-group col-md-12">
+            <label>Motivo de tu consulta</label>
+            <input type="text" class="form-control" formControlName="motivoConsulta">
+        </div>
+        <div class="form-group col-md-12">
+            <label>Consulta</label>
+            <textarea type="textbox" class="form-control" formControlName="consulta" rows="5"></textarea>
+        </div>
+        <div class="col text-center">
+            <input type="submit" value="Enviar" class="btn btn-outline-info col-md-12">
+        </div>
+    </form>
+</div>
