@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
   mostrar = true;
+  
  
   constructor() {}
 
@@ -14,6 +15,6 @@ export class PrincipalComponent implements OnInit {
 
   mostrarOcultar() {
     this.mostrar = !this.mostrar;
-   
+    
   }
 }
