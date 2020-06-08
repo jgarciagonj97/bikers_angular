@@ -10,8 +10,8 @@ import { PerfilComponent } from '../app/componentes/perfil/perfil.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
-  { path: 'login', component: PrincipalComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'principal' },
+  { path: 'principal', component: PrincipalComponent },
   { path: 'home', component: HomeComponent },
   { path: 'posts', component: PostComponent },
   { path: 'blog', component: BlogComponent },
