@@ -17,7 +17,9 @@
 }
 
 .login-title{
-    margin-left: 43%;
+   margin-left: 30%;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
 }
 .login-wrapper .login-btn:hover {
   border: 1px solid #25232A;
@@ -32,9 +34,15 @@
 
 }
 .form-group label{
+  text-shadow: 2px 2px 4px #000;
     font-size: 14px;
     font-weight: bold;
     color: #ccc;
     padding-left: 10px;
 }
 
+
+.borde{
+  
+   box-shadow: 0px 0px 84px 14px rgba(0,0,0,0.75); 
+}
