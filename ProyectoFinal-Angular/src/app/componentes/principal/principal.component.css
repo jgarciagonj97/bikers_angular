@@ -35,9 +35,7 @@
     background-color: aqua;
 }
 
-.content > div:last-child{
-    display: none;
-}
+
 .content{
     background-image: url('../../../assets/img/background.jpg');
     background-size: cover;

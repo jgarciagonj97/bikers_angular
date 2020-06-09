@@ -1,14 +1,14 @@
 <div class="form">
     <ul class="grupo">
-        <li class="boton" (click)="mostrarOcultar()"><a href="#register" >REGISTRATE</a></li>
-        <li class="boton" (click)="mostrarOcultar()"><a href="#login">INICIA SESION</a></li>
+        <li class="boton" (click)="mostrar()"><a href="#register" >REGISTRATE</a></li>
+        <li class="boton" (click)="mostrar2()"><a href="#login">INICIA SESION</a></li>
     </ul>
 
     <div class="content">
         <div id="register" *ngIf="mostrar">
             <app-register></app-register>
         </div>
-        <div id="login" *ngIf="mostrar"> 
+        <div id="login" *ngIf="mostrar2"> 
             <app-login></app-login>
         </div>
     </div>

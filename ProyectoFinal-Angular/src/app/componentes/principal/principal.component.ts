@@ -6,15 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal.component.css'],
 })
 export class PrincipalComponent implements OnInit {
-  mostrar = true;
-  
+  registro = true;
+  login = false;
  
   constructor() {}
 
   ngOnInit(): void {}
 
-  mostrarOcultar() {
-    this.mostrar = !this.mostrar;
+  mostrar() {
+    this.registro = !this.registro;
+    
+  }
+  mostrar2() {
+    this.login = !this.login;
     
   }
 }
