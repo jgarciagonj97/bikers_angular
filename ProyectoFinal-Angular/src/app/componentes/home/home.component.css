@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+
+}
+
+.carousel-item{
+    width: 1000px;
+    height: auto;
+}
+.post{
+    border: 2px solid black;
+    padding: 15px;
+}
+.foto img{
+    width: 100%;
+    height: auto;
+}
