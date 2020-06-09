@@ -7,18 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
   registro = true;
-  login = false;
+  
  
   constructor() {}
 
   ngOnInit(): void {}
 
-  mostrar() {
-    this.registro = !this.registro;
+  mostrar(isRegistro) {
+
+    this.registro = isRegistro;
     
   }
-  mostrar2() {
-    this.login = !this.login;
-    
-  }
+  
 }
