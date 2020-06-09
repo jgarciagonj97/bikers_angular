@@ -1,0 +1,36 @@
+img{
+    width: 100%;
+    height: auto;
+}
+
+.post{
+    height: 600px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 10px #999;
+}
+
+.relacionados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.articulo{
+    border: 1px solid greenyellow;
+    width: 22%;
+    margin-bottom: 2%;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.articulo img{
+    padding: 5%;
+}
+
+.articulo h6{
+    text-align: center;
+}
+
+.articulo p{
+    padding: 0 5%;
+}

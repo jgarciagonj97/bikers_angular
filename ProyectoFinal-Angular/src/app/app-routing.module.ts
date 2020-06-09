@@ -13,8 +13,11 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'principal' },
   { path: 'principal', component: PrincipalComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'posts', component: PostComponent },
-  { path: 'blog', component: BlogComponent },
+  {
+    path: 'blog', component: BlogComponent, children: [
+      { path: ':idPost', component: PostComponent }
+    ]
+  },
   { path: 'browser', component: BuscadorComponent },
   { path: 'support', component: SoporteComponent },
   { path: 'profile', component: PerfilComponent },

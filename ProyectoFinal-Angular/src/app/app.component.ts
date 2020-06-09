@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
 
 
 @Component({
@@ -9,6 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ProyectoFinal-Angular';
+
+  href: string;
+
+  ngOnInit() {
+    this.href = window.location.href;
+  }
 }
 

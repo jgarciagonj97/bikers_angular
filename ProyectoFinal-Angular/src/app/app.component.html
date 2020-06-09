@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <header>
+  <header *ngIf="href!=='http://localhost:4200/principal'">
     <!-- Menu de navegacion -->
 
     <img class="logo" src="assets/img/logo_size_invert.jpg" [routerLink]="['/home']">
