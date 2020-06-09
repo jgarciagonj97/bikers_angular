@@ -1,4 +1,5 @@
 export class PostBlog {
+    id: number;
     titulo: string;
     texto: string;
     autor: string;
