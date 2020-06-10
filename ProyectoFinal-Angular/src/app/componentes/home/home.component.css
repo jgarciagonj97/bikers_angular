@@ -4,9 +4,15 @@
     padding: 0;
 }
 
-
+#carrusel{
+    height: 50vh;
+}
 #carrusel .carousel-inner{
-    height: 500px;
+    height: 50vh;
+}
+.carousel-item{
+    height: 50vh;
+    min-height: 450px;
 }
 .post{
     border: 2px solid black;
