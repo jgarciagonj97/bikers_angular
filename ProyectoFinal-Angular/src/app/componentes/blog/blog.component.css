@@ -25,6 +25,10 @@ img {
   border: none;
   box-shadow: 0 4px 8px rgba(165, 165, 165, .6);
   cursor: pointer;
+  transition: 0.3s all ease;
+}
+.card:hover{
+  background-color: #ccc;
 }
 
 .cuerpo {
@@ -54,4 +58,23 @@ img {
     border-right: none;
     border-left: none;
 
+}
+
+.autor p{
+  background-color: #25232A;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 2px;
+
+}
+
+.titulo h2{
+  text-align: center;
+  font-size: 50px;
+  background-color: #25232A;
+  color: #ccc;
+  opacity: 0.8;
+  width: 100%;
 }
