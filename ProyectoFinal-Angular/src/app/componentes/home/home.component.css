@@ -1,15 +1,20 @@
 *{
     box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
 }
 
-.carousel-item{
-    width: 1000px;
-    height: auto;
+
+#carrusel .carousel-inner{
+    height: 500px;
 }
 .post{
     border: 2px solid black;
     padding: 15px;
+}
+.foto{
+    width: 100%;
+    height: auto;
 }
 .foto img{
     width: 100%;
