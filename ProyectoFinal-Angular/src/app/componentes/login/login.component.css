@@ -16,33 +16,56 @@
   margin-bottom: 14px;
 }
 
-.login-title{
-   margin-left: 30%;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
+.login-title {
+  margin-left: 30%;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
 }
+
 .login-wrapper .login-btn:hover {
   border: 1px solid #25232A;
   background-color: #fff;
   color: #25232A;
 }
 
-.form-group input{
-    border-top: none;
-    border-right: none;
-    border-left: none;
+.form-group input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
 
 }
-.form-group label{
+
+.form-group label {
   text-shadow: 2px 2px 4px #000;
-    font-size: 14px;
-    font-weight: bold;
-    color: #ccc;
-    padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ccc;
+  padding-left: 10px;
+}
+
+.footer {
+  padding: 12px;
+
+
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #25232A;
+  padding: 10px;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: rgb(15, 183, 224);
+  ;
+
 }
 
 
-.borde{
-  
-   box-shadow: 0px 0px 84px 14px rgba(0,0,0,0.75); 
+
+.borde {
+
+  box-shadow: 0px 0px 84px 14px rgba(0, 0, 0, 0.75);
 }
