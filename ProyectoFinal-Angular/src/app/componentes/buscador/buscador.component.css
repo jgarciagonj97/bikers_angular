@@ -1,0 +1,26 @@
+.usuarios{
+    border: 2px solid black;
+}
+
+.barra{
+    width: 90%;
+}
+
+.btn{
+    width: 5.3em;
+}
+
+.usuarios .nombre{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.325em;
+    font-weight: 700;
+}
+
+.usuarios .descripcion{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+.usuarios .ciudad{
+    font-style: italic;
+}

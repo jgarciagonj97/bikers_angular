@@ -4,9 +4,29 @@ img{
 }
 
 .post{
-    height: 600px;
     border: 3px solid black;
     box-shadow: 5px 5px 10px #999;
+}
+
+.post img{
+    width: 98.5%;
+    margin: 0.6em;
+}
+
+.post h3{
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 700;
+}
+
+.post .autor{
+    font-style: italic;
+    font-weight: 500;
+    margin-left: 0.6em;
+}
+
+.post p{
+    margin: 0.6em;
 }
 
 .relacionados{
@@ -21,6 +41,12 @@ img{
     width: 22%;
     margin-bottom: 2%;
     box-shadow: 2px 2px 5px #999;
+}
+
+.articulo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.8s;
 }
 
 .articulo img{
