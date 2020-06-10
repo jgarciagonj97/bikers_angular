@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'principal' },
   { path: 'principal', component: PrincipalComponent },
   { path: 'home', component: HomeComponent },
+  
   {
     path: 'blog', component: BlogComponent, children: [
       { path: ':idPost', component: PostComponent }
