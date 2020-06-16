@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
   registro = true;
-  
- 
-  constructor() {}
 
-  ngOnInit(): void {}
+
+  constructor() { }
+
+  ngOnInit(): void { }
 
   mostrar(isRegistro) {
 
     this.registro = isRegistro;
-    
+
   }
-  
+
 }

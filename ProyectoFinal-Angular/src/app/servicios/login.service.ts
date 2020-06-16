@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
-  baseUrl:string;
+  baseUrl: string;
 
-  constructor(private httpClient: HttpClient) { 
-    this.baseUrl='http://bikers1.herokuapp.com';
+  constructor(private httpClient: HttpClient) {
+    this.baseUrl = 'https://bikers1.herokuapp.com';
   }
 
   registro(formValues): Promise<any> {
