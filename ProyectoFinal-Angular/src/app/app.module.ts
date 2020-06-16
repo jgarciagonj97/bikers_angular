@@ -12,6 +12,7 @@ import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormularioComponent } from './componentes/formulario/formulario.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PostComponent,
     BuscadorComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,

@@ -54,16 +54,29 @@ header {
 
 button{
   padding: 9px 25px;  
-  background-color: rgb(15, 183, 224);
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   margin-left: auto;
 }
+.contact{
+  
+  background-color: rgb(15, 183, 224);
+ 
+}
 
-button:hover{
+.contact:hover{
   background-color: rgba(15,183,224,0.8);;
+}
+.newpost{
+
+  background-color: rgb(32, 202, 103);
+ 
+}
+
+.newpost:hover{
+  background-color: rgba(18, 146, 97, 0.8);;
 }
 
 .footer{

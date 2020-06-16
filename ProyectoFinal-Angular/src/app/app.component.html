@@ -9,10 +9,16 @@
         <li><a [routerLink]="['/blog']">BLOG</a></li>
         <li><a [routerLink]="['/browser']">BUSCADOR</a></li>
         <li><a [routerLink]="['/profile']">PERFIL</a></li>
+        <li><a [routerLink]="['/newPost']"><button class="newpost">CREAR POST</button> </a></li>
       </ul>
 
     </nav>
-    <a class="contact" [routerLink]="['/support']"><button>CONTACTO</button> </a>
+    <ul>
+      <li>
+         <a [routerLink]="['/support']"><button class="contact">CONTACTO</button> </a>
+      </li>
+    </ul>
+   
   </header>
 
   <!-- main -->
