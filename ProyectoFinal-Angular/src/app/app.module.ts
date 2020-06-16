@@ -13,6 +13,8 @@ import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { HttpClientModule} from '@angular/common/http'
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
