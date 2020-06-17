@@ -19,7 +19,7 @@
 }
 
 .login-title {
-  margin-left: 30%;
+  text-align: center;
   color: #fff;
   text-shadow: 2px 2px 4px #000;
 }
@@ -47,8 +47,6 @@
 
 .footer {
   padding: 12px;
-
-
 }
 
 .footer a {
@@ -61,12 +59,9 @@
 .footer a:hover {
   text-decoration: none;
   color: rgb(15, 183, 224);
-  ;
-
 }
 
-
-
 .borde {
+  margin-top: 7%;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
 }
