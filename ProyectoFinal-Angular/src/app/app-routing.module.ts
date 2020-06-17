@@ -10,25 +10,26 @@ import { PerfilComponent } from '../app/componentes/perfil/perfil.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { LoginGuard } from './login.guard';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'principal' },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
     path: 'principal', component: PrincipalComponent, children: [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent }
     ],
   },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [LoginGuard] },
   {
     path: 'blog',
-    component: BlogComponent,
+    component: BlogComponent, canActivate: [LoginGuard],
     children: [{ path: ':idPost', component: PostComponent }],
   },
-  { path: 'browser', component: BuscadorComponent },
-  { path: 'newPost', component: FormularioComponent },
-  { path: 'support', component: SoporteComponent },
-  { path: 'profile', component: PerfilComponent },
+  { path: 'browser', component: BuscadorComponent, canActivate: [LoginGuard] },
+  { path: 'newPost', component: FormularioComponent, canActivate: [LoginGuard] },
+  { path: 'support', component: SoporteComponent, canActivate: [LoginGuard] },
+  { path: 'profile', component: PerfilComponent, canActivate: [LoginGuard] },
   { path: '**', redirectTo: 'login' },
 ];
 
