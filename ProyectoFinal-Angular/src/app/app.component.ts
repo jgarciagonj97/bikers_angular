@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { PostService } from './servicios/post.service';
 
 
 @Component({
@@ -11,14 +12,19 @@ export class AppComponent {
 
   href: string;
   rol:string;
-  constructor(public router: Router) {
-    this.rol = null;
+  
+  constructor(public router: Router,private postService:PostService) {
+    //this.rol = null;
+    
    }
 
-  ngOnInit() {
-    if(localStorage.getItem("rol")) this.rol="admin";
-      
+   ngOnInit():void {
+     this.rol = localStorage.getItem('rol');
+    console.log(this.rol);
   }
+
+  
+
 
 }
 

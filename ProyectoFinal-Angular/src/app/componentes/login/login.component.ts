@@ -27,10 +27,14 @@ export class LoginComponent implements OnInit {
     const response = await this.loginservice.login(this.formLogin.value);
     const id = await this.postService.obtenerId(this.formLogin.value.email);
     this.postService.recibirId(id[0].id);
+    this.postService.obtenerUsuario(this.formLogin.value.email)
     if (response['success']) {
       const token = response['token'];
       localStorage.setItem('user-token', token);
+      localStorage.setItem('rol', response['rol']);
       this.router.navigate(['/home']);
+      
+
     }
   }
 
