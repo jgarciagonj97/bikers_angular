@@ -2,20 +2,20 @@
   <header *ngIf="href!=='http://localhost:4200/principal'">
     <!-- Menu de navegacion -->
 
-    <img class="logo" src="assets/img/logo_size_invert.jpg" [routerLink]="['/home']">
+    <img class="logo" src="assets/img/Logo.png" [routerLink]="['/home']">
     <!--  <h1 class="logo">BIKERS</h1> -->
-    <nav>
-      <ul class="nav_menu">
-        <li><a [routerLink]="['/blog']">BLOG</a></li>
-        <li><a [routerLink]="['/browser']">BUSCADOR</a></li>
-        <li><a [routerLink]="['/profile']">PERFIL</a></li>
-        <li><a [routerLink]="['/newPost']"><button class="newpost">CREAR POST</button> </a></li>
+    <nav class="navbar navbar-expand-lg">
+      <ul class="nav_menu mr-auto">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/blog']">BLOG</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/browser']">BUSCADOR</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/profile']">PERFIL</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/newPost']"><button class="newpost">CREAR POST</button> </a></li>
       </ul>
 
     </nav>
-    <ul>
-      <li>
-        <a [routerLink]="['/support']"><button class="contact">CONTACTO</button> </a>
+    <ul class="mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/support']"><button class="contact">CONTACTO</button> </a>
       </li>
     </ul>
 
