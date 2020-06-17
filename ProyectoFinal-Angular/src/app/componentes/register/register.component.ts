@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/servicios/login.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -35,7 +36,11 @@ export class RegisterComponent implements OnInit {
         if (response.success) {
           this.formRegistro.reset();
           //Crear un alert con la libreria que hace los alerts chulos
-          alert('Te has registrado correctamente');
+          Swal.fire({
+            icon: 'success',
+            title: 'Hecho',
+            text: 'Te has registrado correctamente',
+          });
         }
       })
       .catch(err => {
