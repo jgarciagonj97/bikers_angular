@@ -34,6 +34,7 @@ export class RegisterComponent implements OnInit {
       .then(response => {
         if (response.success) {
           this.formRegistro.reset();
+          //Crear un alert con la libreria que hace los alerts chulos
           alert('Te has registrado correctamente');
         }
       })

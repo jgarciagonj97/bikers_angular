@@ -14,8 +14,8 @@ h1,
 li,
 a,
 button {
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 19px;
   color: #edf0f1;
   text-decoration: none;
 }
@@ -41,7 +41,7 @@ header {
 
 .nav_menu li {
   display: inline-block;
-  padding: 0px 100px;
+  padding: 0px 80px;
   
 
 }
@@ -51,20 +51,20 @@ header {
 }
 
 .nav_menu li a:hover {
-  color: #00ccff;
+  color: #37A88B;
 }
 
 button{
-  padding: 9px 25px;  
+  padding: 9px 20px;  
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  margin-left: auto;
+  
 }
 .contact{
   
-  background-color: rgb(15, 183, 224);
+  background-color: rgba(15, 183, 224);
  
 }
 
