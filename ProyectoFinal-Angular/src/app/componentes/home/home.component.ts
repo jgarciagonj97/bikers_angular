@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
 
    async ngOnInit() {
-  this.arrNovedades = await this.postService.cargarNovedades(121);
+  this.arrNovedades = await this.postService.cargarNovedades();
   console.log(this.arrNovedades)
   }
 

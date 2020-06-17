@@ -10,10 +10,14 @@ import { Router } from '@angular/router';
 export class AppComponent {
 
   href: string;
-
-  constructor(public router: Router) { }
+  rol:string;
+  constructor(public router: Router) {
+    this.rol = null;
+   }
 
   ngOnInit() {
+    if(localStorage.getItem("rol")) this.rol="admin";
+      
   }
 
 }

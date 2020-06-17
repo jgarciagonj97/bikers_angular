@@ -7,12 +7,24 @@ import { HttpClient } from '@angular/common/http';
 export class PostService {
 
   baseUrl: string;
-  constructor(private httpClient: HttpClient) {
-    this.baseUrl = 'https://bikers1.herokuapp.com/api/posts'
-   }
+  id: number;
 
-   cargarNovedades(idUsuario):Promise<any>{
-     return this.httpClient.get(`${this.baseUrl}/home/${idUsuario}`).toPromise();
-   }
+  constructor(private httpClient: HttpClient) {
+    this.baseUrl = 'https://bikers1.herokuapp.com/api';
+    this.id = 121;
+
+  }
+  recibirId(pId) {
+    this.id = pId;
+    console.log('Este es el recibirID'+this.id)
+  }
+  cargarNovedades(): Promise<any> {
+    console.log(`${this.baseUrl}/posts/home/${this.id} `)
+    return this.httpClient.get(`${this.baseUrl}/posts/home/${this.id}`).toPromise();
+  }
+  obtenerId(pEmail): Promise<any> {
+    return this.httpClient.get(`${this.baseUrl}/users/id/${pEmail}`).toPromise();
+  }
+
 
 }
