@@ -1,19 +1,31 @@
 export class Usuario {
 
+    id:number;
     nombre: string;
     apellidos: string;
-    fecha_nacimiento: Date;
+    username:string;
     email: string;
+    fecha_registro:Date;
     password: string;
-    ciudad: string;
+    ciudad:string;
+    fecha_nacimiento: Date;
+    imagen:string;
+    rol:string;
+    
+    
+    
 
-    constructor(nombre: string, apellidos: string, fecha_nacimiento: Date, email: string, password: string, ciudad: string) {
+    constructor(id: number,nombre: string, apellidos: string,username:string, fecha_nacimiento: Date, email: string, password: string, ciudad: string, fecha_registro:Date, imagen:string,rol:string) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.fecha_nacimiento = fecha_nacimiento;
+        this.username = username;
         this.email = email;
+        this.fecha_registro = fecha_registro;
         this.password = password;
         this.ciudad = ciudad;
-
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.imagen = imagen;
+        this.rol = rol;
     }
 }
