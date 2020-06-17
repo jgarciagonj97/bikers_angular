@@ -1,7 +1,10 @@
-.grupo {
-    
-    padding: 0 ;
+*{
+    padding: 0;
+    margin: 0;
+}
 
+.grupo {
+    padding: 0 ;
 }
 .grupo li a{
     list-style: none;

@@ -21,18 +21,18 @@ button {
 }
 
 header {
-  background-color: #24252A;
+  background-color: #24252a;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px 10%;
 }
 
 .logo {
   cursor: pointer;
   margin-right: auto;
   width: auto;
-  height: 5em;
+  height: 7em;
+  margin-left: 7em;
 }
 
 .nav_menu {
@@ -41,78 +41,83 @@ header {
 
 .nav_menu li {
   display: inline-block;
-  padding: 0px 80px;
+  padding: 0px 50px;
+}
+
+.nav_menu li a { 
   
+  transition: all 0.3s ease;
+ 
+}
+.nav_menu li .line{
+  transition: all 0ms;
+  border-bottom: none;
 
 }
-
-.nav_menu li a {
-  transition: all 0.3s ease 0s;
+.nav_menu li .line:hover{
+  border-bottom: 2px solid #37a88b;
 }
-
 .nav_menu li a:hover {
-  color: #37A88B;
+  color: #37a88b;
+  
 }
 
-button{
-  padding: 9px 20px;  
+
+
+button {
+  padding: 5px 20px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  
 }
-.contact{
-  
+.contact {
   background-color: rgba(15, 183, 224);
- 
 }
 
-.contact:hover{
-  background-color: rgba(15,183,224,0.8);;
+.contact:hover {
+  background-color: rgba(15, 183, 224, 0.8);
 }
-.newpost{
-
+.newpost {
   background-color: rgb(32, 202, 103);
- 
 }
 
-.newpost:hover{
-  background-color: rgba(18, 146, 97, 0.8);;
+.newpost:hover {
+  background-color: rgba(18, 146, 97, 0.8);
 }
 
-.footer{
- background-color: #24252A;
+.footer {
+  background-color: #24252a;
 }
 
-.redes{
+.redes {
   width: 60%;
   margin: 0 auto;
 }
 
-.footer ul{
+.footer ul {
   width: 40%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
 
-.footer ul li{
+.footer ul li {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.footer ul li p{
-font-weight: normal;
+.footer ul li p {
+  font-weight: normal;
 }
 
-li i{
-  color:rgb(24, 161, 216);
+li i {
+  color: rgb(24, 161, 216);
   font-size: 32px;
   cursor: pointer;
 }
 
-.footer-copyright{
+.footer-copyright {
   color: white;
 }
