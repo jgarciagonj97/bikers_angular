@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/login.service';
+import { LoginService } from 'src/app/servicios/login.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -11,15 +11,16 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   formRegistro: FormGroup;
+
   constructor(private loginService: LoginService, private router: Router) {
     this.formRegistro = new FormGroup({
-      nombre: new FormControl(''),
-      apellidos: new FormControl(''),
-      username: new FormControl(''),
-      fecha_nacimiento: new FormControl(''),
-      email: new FormControl(''),
-      password: new FormControl(''),
-      ciudad: new FormControl('')
+      nombre: new FormControl(),
+      apellidos: new FormControl(),
+      username: new FormControl(),
+      fecha_nacimiento: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl(),
+      ciudad: new FormControl()
     })
   }
 
@@ -32,8 +33,8 @@ export class RegisterComponent implements OnInit {
     this.loginService.registro(this.formRegistro.value)
       .then(response => {
         if (response.success) {
+          this.formRegistro.reset();
           alert('Te has registrado correctamente');
-          this.router.navigate(['/login']);
         }
       })
       .catch(err => {

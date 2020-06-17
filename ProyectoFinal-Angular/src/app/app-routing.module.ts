@@ -8,10 +8,17 @@ import { BuscadorComponent } from '../app/componentes/buscador/buscador.componen
 import { SoporteComponent } from '../app/componentes/soporte/soporte.component';
 import { PerfilComponent } from '../app/componentes/perfil/perfil.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { RegisterComponent } from './componentes/register/register.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'principal' },
-  { path: 'principal', component: PrincipalComponent },
+  {
+    path: 'principal', component: PrincipalComponent, children: [
+      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent }
+    ],
+  },
   { path: 'home', component: HomeComponent },
 
   {
@@ -30,4 +37,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
