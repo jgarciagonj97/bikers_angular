@@ -1,13 +1,13 @@
 export class PostUsuario{
     titulo: string;
-    texto: string;
-    autor: string;
-    fecha: Date;
+    descripcion: string;
+    fk_idUsuario: string;
+    
 
-    constructor(titulo: string,texto: string,autor: string,fecha: Date){
+    constructor(titulo: string, descripcion: string,autor: string){
         this.titulo = titulo;
-        this.autor = autor;
-        this.texto = texto;
-        this.fecha = fecha;
+        this.fk_idUsuario = autor;
+        this.descripcion = descripcion;
+        
     }
 }

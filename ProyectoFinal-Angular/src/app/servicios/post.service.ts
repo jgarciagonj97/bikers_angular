@@ -1,0 +1,18 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PostService {
+
+  baseUrl: string;
+  constructor(private httpClient: HttpClient) {
+    this.baseUrl = 'https://bikers1.herokuapp.com/api/posts'
+   }
+
+   cargarNovedades(idUsuario):Promise<any>{
+     return this.httpClient.get(`${this.baseUrl}/home/${idUsuario}`).toPromise();
+   }
+
+}
