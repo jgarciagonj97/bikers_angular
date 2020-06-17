@@ -26,3 +26,19 @@
     width: 100%;
     height: auto;
 }
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+    background-color: #25232A;
+    color: #ccc;
+    opacity: 0.8;
+    width: 100%;
+    padding: 0.30em;
+  }
