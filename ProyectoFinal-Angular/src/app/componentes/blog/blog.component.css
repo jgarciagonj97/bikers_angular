@@ -8,17 +8,9 @@ img {
   height: 270px;
   width: 270px;
   opacity: 0.9;
-  position: relative;
+
 }
 
-.imagen:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-}
 
 .card {
   margin: 4%;
@@ -26,8 +18,10 @@ img {
   box-shadow: 0 4px 8px rgba(165, 165, 165, .6);
   cursor: pointer;
   transition: 0.3s all ease;
+
 }
-.card:hover{
+
+.card:hover {
   background-color: #ccc;
 }
 
@@ -47,20 +41,21 @@ img {
   height: auto;
   padding: 10px;
   width: auto;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-.posicion{
-    position: fixed;
+.posicion {
+  position: fixed;
 }
-.buscador{
-    border-top: none;
-    border-right: none;
-    border-left: none;
+
+.buscador {
+  border-top: none;
+  border-right: none;
+  border-left: none;
 
 }
 
-.autor p{
+.autor p {
   background-color: #25232A;
   color: #ccc;
   font-weight: bold;
@@ -70,11 +65,55 @@ img {
 
 }
 
-.titulo h2{
+.titulo h2 {
   text-align: center;
   font-size: 50px;
   background-color: #25232A;
   color: #ccc;
   opacity: 0.8;
   width: 100%;
+}
+
+.barraBusqueda {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.busqueda {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.barraBusqueda:hover>.busqueda {
+  padding: 0 10px;
+  width: 200px;
+  caret-color: #37a88b;
+  transition: width 0.4s linear;
+}
+
+.barraBusqueda:hover>.icon {
+  background: white;
+  color: #37a88b;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
 }

@@ -1,18 +1,47 @@
-.container{
-    margin: 0 auto;
+.container {
+  margin: 0 auto;
 }
 
-.row img{
+.row img {
+  width: auto;
+  height: auto;
+  margin-top: 40%;
+  border: 1px solid rgba(0, 0, 0, 0, 0.8);
+  box-shadow: 5px 10px 50px #888888;
+}
+
+
+.row .datos {
+  width: 100%;
+  height: auto;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8), -4px 0 10px rgba(0, 0, 0, 0.8);
+  padding-bottom: 1em;
+}
+
+form div {
+  padding: 10px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 50px;
+  background-color: #25232A;
+  color: #ccc;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.form-group input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  
+  }
+.titulo2{
+    text-align: center;
+    font-size: 25px;
+    background-color: #177c30;
+    color: #ccc;
+    opacity: 0.8;
     width: 100%;
-    height: auto;
-}
-
-.row .datos{
-    width: 100%;
-    height: auto;
-    border: 1.5px solid black;
-}
-
-form div{
-    padding:10px;
 }
