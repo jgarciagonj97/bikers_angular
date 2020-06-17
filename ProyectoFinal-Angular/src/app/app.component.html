@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <header *ngIf="href!=='http://localhost:4200/principal'">
+  <header *ngIf="this.router.url!=='/principal'">
     <!-- Menu de navegacion -->
 
     <img class="logo" src="assets/img/Logo.png" [routerLink]="['/home']">
@@ -17,7 +17,7 @@
       </ul>
 
     </nav>
-    
+
 
   </header>
 

@@ -7,17 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  contador: number;
 
-  constructor() {
-    this.contador = 0;
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    if (this.contador === 0) {
-      window.location.reload();
-      this.contador++;
-    }
   }
 
 }
