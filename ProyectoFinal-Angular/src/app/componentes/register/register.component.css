@@ -45,8 +45,7 @@
 
 
 
-
 .borde {
 
-  box-shadow: 0px 0px 84px 14px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
 }

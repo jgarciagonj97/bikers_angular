@@ -6,19 +6,14 @@
 .grupo {
     padding: 0 ;
 }
-.grupo li a{
-    list-style: none;
-    text-decoration: none;
-    color:azure;
-    font-size: 20px;
-    font-weight: bold;
-}
+
 .grupo li {
     display: block;
-    
     padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
     background-color: #25232A;
-    color: aqua;
+    color: #2fd1a9;
     float: left ;
     width: 50%;
     text-align: center;

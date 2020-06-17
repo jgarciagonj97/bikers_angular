@@ -5,7 +5,9 @@
   background-position: left;
 
 }
-
+.contenedor{
+  height: 91.15vh;
+}
 .login-wrapper .login-btn {
   padding: 13px 20px;
   background-color: #25232A;
@@ -66,6 +68,5 @@
 
 
 .borde {
-
-  box-shadow: 0px 0px 84px 14px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
 }
