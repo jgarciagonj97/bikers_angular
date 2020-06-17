@@ -10,7 +10,7 @@ import { PerfilComponent } from '../app/componentes/perfil/perfil.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { LoginGuard } from './login.guard';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
