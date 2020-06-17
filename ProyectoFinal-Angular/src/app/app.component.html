@@ -6,29 +6,24 @@
     <!--  <h1 class="logo">BIKERS</h1> -->
     <nav class="navbar navbar-expand-lg">
       <ul class="nav_menu mr-auto">
-        <li class="nav-item"><a class="nav-link" [routerLink]="['/blog']">BLOG</a></li>
-        <li class="nav-item"><a class="nav-link" [routerLink]="['/browser']">BUSCADOR</a></li>
-        <li class="nav-item"><a class="nav-link" [routerLink]="['/profile']">PERFIL</a></li>
+        <li class="nav-item"><a class="nav-link line" [routerLink]="['/home']">HOME</a></li>
+        <li class="nav-item"><a class="nav-link line" [routerLink]="['/blog']">BLOG</a></li>
+        <li class="nav-item"><a class="nav-link line" [routerLink]="['/browser']">BUSCADOR</a></li>
+        <li class="nav-item"><a class="nav-link line" [routerLink]="['/profile']">PERFIL</a></li>
         <li class="nav-item"><a class="nav-link" [routerLink]="['/newPost']"><button class="newpost">CREAR POST</button>
           </a></li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/support']"><button class="contact">CONTACTO</button> </a>
         </li>
       </ul>
-
     </nav>
-
-
   </header>
-
   <!-- main -->
   <!-- <app-login></app-login>
   <app-register></app-register> -->
-
   <div>
     <router-outlet></router-outlet>
   </div>
-
   <footer class="footer">
     <div class="redes">
       <ul>
