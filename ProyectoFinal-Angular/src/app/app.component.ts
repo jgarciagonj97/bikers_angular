@@ -11,17 +11,20 @@ import { PostService } from './servicios/post.service';
 export class AppComponent {
 
   href: string;
-  //rol:string;
-  //user:any;
+  rol:string;
+  
   constructor(public router: Router,private postService:PostService) {
     //this.rol = null;
+    
    }
 
-  async ngOnInit():Promise<any> {
-    //this.user = await this.postService.obtenerUsuario(await this.postService.recuperarEmail);
-    //this.rol = this.user.rol;
-    //console.log(this.user);
+   ngOnInit():void {
+     this.rol = localStorage.getItem('rol');
+    console.log(this.rol);
   }
+
+  
+
 
 }
 
