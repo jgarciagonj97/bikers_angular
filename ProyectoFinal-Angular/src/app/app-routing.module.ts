@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'newPost', component: FormularioComponent, canActivate: [LoginGuard] },
   { path: 'support', component: SoporteComponent, canActivate: [LoginGuard] },
   { path: 'profile', component: PerfilComponent, canActivate: [LoginGuard] },
-  { path: '**', redirectTo: 'login' },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

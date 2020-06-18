@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostService } from './servicios/post.service';
-
+import { Location } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -10,18 +11,42 @@ import { PostService } from './servicios/post.service';
 })
 export class AppComponent {
 
-  href: string;
-  //rol:string;
-  //user:any;
-  constructor(public router: Router,private postService:PostService) {
-    //this.rol = null;
-   }
 
-  async ngOnInit():Promise<any> {
-    //this.user = await this.postService.obtenerUsuario(await this.postService.recuperarEmail);
-    //this.rol = this.user.rol;
-    //console.log(this.user);
+  rol: string;
+
+  constructor(public router: Router, private postService: PostService, private location: Location) {
+    router.events.subscribe(() => {
+      if (location.path() != "") this.rol = localStorage.getItem('rol');
+    });
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  onClick() {
+    Swal.fire({
+      title: '¿Estás segur@?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Salir'
+    }).then((result) => {
+      if (result.value) {
+        localStorage.removeItem('user-token');
+        localStorage.removeItem('rol');
+        this.router.navigate(['/principal']);
+      }
+    })
   }
 
 }
+
+
+
+
+
+
+
 

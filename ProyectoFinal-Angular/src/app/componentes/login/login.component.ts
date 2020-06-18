@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
 
-  constructor(private loginservice: LoginService, private router: Router,private postService:PostService) {
+  constructor(private loginservice: LoginService, private router: Router, private postService: PostService) {
     this.formLogin = new FormGroup({
       email: new FormControl(),
       password: new FormControl()
@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
     if (response['success']) {
       const token = response['token'];
       localStorage.setItem('user-token', token);
+      localStorage.setItem('rol', response['rol']);
       this.router.navigate(['/home']);
     }
   }
