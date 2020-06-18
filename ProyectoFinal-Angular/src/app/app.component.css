@@ -51,18 +51,21 @@ header {
 }
 .nav_menu li .line{
   transition: all 0ms;
-  border-bottom: none;
-
+  list-style: none;
 }
+
 .nav_menu li .line:hover{
   border-bottom: 2px solid #37a88b;
 }
+
 .nav_menu li a:hover {
   color: #37a88b;
-  
 }
 
-
+.activa{
+  color: #37a88b;
+  border-bottom: 2px solid #37a88b;
+}
 
 button {
   padding: 5px 20px;

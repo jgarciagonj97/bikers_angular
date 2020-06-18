@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-redux/store": "^10.0.0",
     "@angular/animations": "~9.1.4",
     "@angular/common": "~9.1.4",
     "@angular/compiler": "~9.1.4",
@@ -23,9 +24,12 @@
     "bootstrap": "^4.5.0",
     "jQuery": "^1.7.4",
     "jquery": "^3.5.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "rxjs": "~6.5.4",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^9.15.1",
+    "tassign": "^1.0.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
