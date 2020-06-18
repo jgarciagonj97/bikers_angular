@@ -41,7 +41,7 @@ header {
 
 .nav_menu li {
   display: inline-block;
-  padding: 0px 50px;
+  padding: 0px 35px;
 }
 
 .nav_menu li a { 
@@ -75,6 +75,14 @@ button {
   background-color: rgba(15, 183, 224);
 }
 
+.logout{
+  background-color: #24252a;
+  border-radius: 50px;
+}
+
+.logout i{
+  color: #edf0f1;
+}
 .contact:hover {
   background-color: rgba(15, 183, 224, 0.8);
 }

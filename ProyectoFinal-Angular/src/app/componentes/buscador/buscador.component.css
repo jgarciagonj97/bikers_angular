@@ -1,12 +1,10 @@
-.usuarios{
-    border: 2px solid black;
-}
+
 
 .barra{
     width: 90%;
 }
 
-.btn{
+.btn{ 
     width: 5.3em;
 }
 
@@ -31,4 +29,47 @@
 
 .btn2{
     margin-left: 50%;
+}
+
+.barraBusqueda {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.busqueda {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px; 
+  transition: width 0.4s linear;
+}
+
+.barraBusqueda:hover>.busqueda {
+  padding: 0 10px;
+  width: 65vw;
+  caret-color: #37a88b;
+  transition: width 0.4s linear;
+}
+
+.barraBusqueda:hover>.icon {
+  background: white;
+  color: #37a88b;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
 }
