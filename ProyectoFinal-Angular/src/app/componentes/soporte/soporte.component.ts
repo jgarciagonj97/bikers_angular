@@ -18,13 +18,13 @@ export class SoporteComponent implements OnInit {
       motivoConsulta: new FormControl('', Validators.required),
       consulta: new FormControl('', Validators.required)
     });
-   }
+  }
 
   ngOnInit(): void {
   }
 
 
-  onSubmit(){
+  onSubmit() {
     //Enviar email a la dirección de contacto que creemos.
   }
 

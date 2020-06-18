@@ -11,13 +11,13 @@ import Swal from 'sweetalert2';
 })
 export class PerfilComponent implements OnInit {
   formUpdate: FormGroup;
-  
+
   user: any;
   constructor(
     private userService: UsersService,
-    private postService: PostService
+    private postService: PostService,
   ) {
-    this.user= {};
+    this.user = {};
     this.formUpdate = new FormGroup({
       nombre: new FormControl(''),
       apellidos: new FormControl(''),
@@ -29,7 +29,7 @@ export class PerfilComponent implements OnInit {
     });
   }
 
-  async ngOnInit(){
+  async ngOnInit() {
     this.user = await this.postService.obtenerUsuario(
       this.postService.recuperarEmail()
     );
@@ -42,12 +42,11 @@ export class PerfilComponent implements OnInit {
       id: new FormControl(this.user.id),
       password: new FormControl(this.user.password)
     });
-    
   }
 
   async onSubmit() {
     console.log(this.formUpdate.value)
-     const response = await this.userService.actualizarPerfil(
+    const response = await this.userService.actualizarPerfil(
       this.formUpdate.value
     );
     if (response['success']) {
@@ -56,6 +55,6 @@ export class PerfilComponent implements OnInit {
         title: 'Hecho',
         text: 'Has actualizado el perfil',
       });
-    } 
+    }
   }
 }

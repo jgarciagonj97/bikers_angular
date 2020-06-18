@@ -6,7 +6,7 @@
         BLOG
     </h2>
 </div>
-<div class="col-12 mt-4 d-flex"> 
+<div class="col-12 mt-4 d-flex">
     <div class="barraBusqueda">
         <input class="busqueda" type="text" name="" placeholder="Buscar...">
         <a href="#" class="icon"><i class="fas fa-search"></i></a>
@@ -15,182 +15,19 @@
 
 
 
-<div class="row col-12"> 
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/rutas.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Rutas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Jonathan Lopez</p>
+<div class="post row col-12">
+<!-- Arreglar click -->
+    <div class="card col-3" *ngFor="let blog of arrBlog">
+        <div >
+            <img class="imagen" src="{{blog.imagen}}">
+            <div class="fecha">{{blog.fecha}}</div>
+            <div class="cuerpo">
+                <h5 class="title">{{blog.titulo}}</h5>
+                <p class="text">{{blog.texto}}</p>
+                <button (click)="clickBlog($event.target)">Ir</button>
+            </div>
         </div>
 
-        </div>
-    </div>
-
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/bicicleta.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Mejores bicicletas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Javier Gonjal</p>
-        </div>
-        </div>
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/equipacion.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Equipación para novatos</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Ivan García</p>
-        </div>
-        </div>
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/rutas.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Rutas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Jonathan Lopez</p>
-        </div>
-
-        </div>
-    </div>
-
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/bicicleta.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Mejores bicicletas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Javier Gonjal</p>
-        </div>
-        </div>
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/equipacion.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Equipación para novatos</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Ivan García</p>
-        </div>
-        </div>
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/rutas.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Rutas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Jonathan Lopez</p>
-        </div>
-
-        </div>
-    </div>
-
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/bicicleta.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Mejores bicicletas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Javier Gonjal</p>
-        </div>
-        </div>
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/equipacion.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Equipación para novatos</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Ivan García</p>
-        </div>
-        </div>
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/rutas.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Rutas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Jonathan Lopez</p>
-        </div>
- 
-        </div>
-    </div>
-
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/bicicleta.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Mejores bicicletas</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Javier Gonjal</p>
-        </div>
-        </div>
-    </div>
-    <div class="card col-3" style="width: 18rem;">
-        <img class="imagen" src="/assets/img/equipacion.jpg"> 
-        <div class="fecha">2020/05/12</div>
-        <div class="cuerpo">
-
-            <h5 class="title">Equipación para novatos</h5>
-            <p class="text">Lorem fistrum ese que llega no te digo trigo por no llamarte Rodrigor llevame al sircoo se
-                calle ustée. Amatomaa jarl va usté muy cargadoo qué dise usteer a gramenawer no te digo trigo por no
-                llamarte Rodrigor.</p>
-        <div class="autor">
-            <p>Ivan García</p>
-        </div>
-        </div>
     </div>
 
 
