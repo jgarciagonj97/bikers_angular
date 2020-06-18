@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostService } from './servicios/post.service';
 import { Location } from '@angular/common';
-
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +11,7 @@ import { Location } from '@angular/common';
 })
 export class AppComponent {
 
-  
+
   rol: string;
 
   constructor(public router: Router, private postService: PostService, private location: Location) {
@@ -22,8 +21,26 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    
+
   }
+
+  onClick() {
+    Swal.fire({
+      title: '¿Estás segur@?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Salir'
+    }).then((result) => {
+      if (result.value) {
+        localStorage.removeItem('user-token');
+        localStorage.removeItem('rol');
+        this.router.navigate(['/principal']);
+      }
+    })
+  }
+
 }
 
 
