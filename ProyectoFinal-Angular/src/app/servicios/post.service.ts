@@ -19,7 +19,7 @@ export class PostService {
     this.id = pId;
   }
   cargarNovedades(): Promise<any> {
-    console.log(`${this.baseUrl}/posts/home/${this.id} `);
+    //console.log(`${this.baseUrl}/posts/home/${this.id} `);
     return this.httpClient.get(`${this.baseUrl}/posts/home/${this.id}`).toPromise();
     
   }
@@ -28,7 +28,7 @@ export class PostService {
   }
   async obtenerUsuario(pEmail):Promise<any>{
     this.usuario = await this.httpClient.get(`${this.baseUrl}/users/email/${pEmail}`).toPromise();
-    console.log(this.usuario);
+    //console.log(this.usuario);
     return this.usuario;
   }
   recuperarEmail(){
