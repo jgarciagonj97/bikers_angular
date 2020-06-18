@@ -19,4 +19,8 @@ export class UsersService {
       .put(`${this.baseUrl}/api/users/${id[0].id}`, formValues)
       .toPromise();
   }
+  
+  users(): Promise<any> {
+    return this.httpClient.get(`${this.baseUrl}/api/users/`).toPromise();
+  }
 }

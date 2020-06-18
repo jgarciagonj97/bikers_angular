@@ -8,53 +8,24 @@
         </div>
     </div> 
     <div class="usuarios mb-1">
-        <div class="row m-1">
-            <img src="../../../assets/img/background.jpg" class="col-3">
-            <div class="col-7">
-                <h6 class="nombre">Nombre usuario</h6>
-                <p class="descripcion">Descripcion</p>
-                <p class="ciudad">Ciudad</p>
+        <p class="personas">Personas</p>
+        <div class="row m-1 marco" *ngFor="let user of arrUsers">
+            <div class="col-2 fotoperfil">
+                <img src="../../../assets/img/usuario.jpg" >
             </div>
-            <div class="col-2">
-                <button class="btn btn-small btn-primary btn1">Seguir</button>
-                <button class="btn btn-small btn-danger btn2">Borrar</button>
+            
+            <div class="col-8">
+                <h6 class="nombre">{{user.nombre}}</h6>
+                <p class="apellidos">{{user.apellidos}}</p>
+                <p class="ciudad">{{user.ciudad}}</p>
             </div>
-        </div>
-        <div class="row m-1">
-            <img src="../../../assets/img/background.jpg" class="col-3">
-            <div class="col-7">
-                <h6 class="nombre">Nombre usuario</h6>
-                <p class="descripcion">Descripcion</p>
-                <p class="ciudad">Ciudad</p>
-            </div>
-            <div class="col-2">
-                <button class="btn btn-small btn-primary btn1">Seguir</button>
-                <button class="btn btn-small btn-danger btn2">Borrar</button>
+            <div class="col-2 agregarUser">
+                <a href="#" class="follow"><i class="fas fa-user-plus"></i></a>
+                
             </div>
         </div>
-        <div class="row m-1">
-            <img src="../../../assets/img/background.jpg" class="col-3">
-            <div class="col-7">
-                <h6 class="nombre">Nombre usuario</h6>
-                <p class="descripcion">Descripcion</p>
-                <p class="ciudad">Ciudad</p>
-            </div>
-            <div class="col-2">
-                <button class="btn btn-small btn-primary btn1">Seguir</button>
-                <button class="btn btn-small btn-danger btn2">Borrar</button>
-            </div>
-        </div>
-        <div class="row m-1">
-            <img src="../../../assets/img/background.jpg" class="col-3">
-            <div class="col-7">
-                <h6 class="nombre">Nombre usuario</h6>
-                <p class="descripcion">Descripcion</p>
-                <p class="ciudad">Ciudad</p>
-            </div>
-            <div class="col-2">
-                <button class="btn btn-small btn-primary btn1">Seguir</button>
-                <button class="btn btn-small btn-danger btn2">Borrar</button>
-            </div>
-        </div>
+        
+       
+       
     </div>
 </div>
