@@ -1,14 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+
+
 img {
   width: 100%;
   height: auto;
   padding: 5px;
 }
 
-.imagen {
-  height: 270px;
-  width: 270px;
-  opacity: 0.9;
-
+.funciona{
+  cursor: pointer;
 }
 
 
@@ -16,8 +18,8 @@ img {
   margin: 4%;
   border: none;
   box-shadow: 0 4px 8px rgba(165, 165, 165, .6);
-  cursor: pointer;
   transition: 0.3s all ease;
+  position:relative;
 
 }
 
@@ -116,4 +118,7 @@ img {
   border-radius: 50%;
   color: white;
   text-decoration: none;
+}
+.post{
+  cursor: pointer;
 }
