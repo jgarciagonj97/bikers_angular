@@ -2,18 +2,17 @@ export class PostBlog {
     id: number;
     titulo: string;
     texto: string;
-    autor: string;
-    imagen: string;
     fecha: Date;
-    categoría: string;
+    imagen: string;
+    
+    
 
 
-    constructor(titulo: string, texto: string, autor: string, imagen: string, fecha: Date, categoría: string) {
+    constructor(titulo: string, texto: string, imagen: string, fecha: Date) {
         this.titulo = titulo;
         this.texto = texto;
-        this.autor = autor;
         this.imagen = imagen;
         this.fecha = fecha;
-        this.categoría = categoría;
+        
     }
 }
