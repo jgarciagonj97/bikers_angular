@@ -33,8 +33,6 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('user-token', token);
       localStorage.setItem('rol', response['rol']);
       this.router.navigate(['/home']);
-      
-
     }
   }
 
