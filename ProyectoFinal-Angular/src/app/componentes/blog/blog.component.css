@@ -90,13 +90,13 @@ img {
   background: none;
   width: 0;
   caret-color: transparent;
-  line-height: 40px;
+  line-height: 40px; 
   transition: width 0.4s linear;
 }
 
 .barraBusqueda:hover>.busqueda {
   padding: 0 10px;
-  width: 200px;
+  width: 93vw;
   caret-color: #37a88b;
   transition: width 0.4s linear;
 }

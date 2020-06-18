@@ -23,14 +23,25 @@
 
 .grupo li:hover{
   background-color: rgb(80, 75, 94);
-    color: #25232A;  
+    color: #2fd1a9;  
 }
 
 .boton .activo  li {
     background-color: aqua;
 }
 
-
+.cabecera{
+    text-align: center;
+    background-color: #25232A
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+.letras{
+    margin-left: 100px;
+    margin-right: 100px;
+}
 .content{
     background-image: url('../../../assets/img/fondo.jpg');
     background-size: cover;

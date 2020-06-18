@@ -2,7 +2,7 @@
   <header *ngIf="this.router.url!=='/principal'">
     <!-- Menu de navegacion -->
 
-    <img class="logo" src="assets/img/Logo.png" [routerLink]="['/home']">
+    <img class="logo" src="assets/img/bikers_logo_blanco.png" [routerLink]="['/home']">
     <!--  <h1 class="logo">BIKERS</h1> -->
     <nav class="navbar navbar-expand-lg">
       <ul class="nav_menu mr-auto">
@@ -19,7 +19,7 @@
           <a class="nav-link" [routerLink]="['/support']"><button class="contact">CONTACTO</button> </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="onClick()"><button class="contact">LOGOUT</button></a>
+          <a class="nav-link" (click)="onClick()"><button class="logout"><i class="fas fa-sign-out-alt"></i></button></a>
         </li>
       </ul>
     </nav>
