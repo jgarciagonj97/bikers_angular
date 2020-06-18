@@ -19,16 +19,13 @@
     text-align: center;
     cursor: pointer;
     transition: 0.3s all ease;
-
 }
 
 .grupo li:hover{
-   
   background-color: rgb(80, 75, 94);
-    color: #25232A;
-  
-    
+    color: #25232A;  
 }
+
 .boton .activo  li {
     background-color: aqua;
 }
@@ -39,7 +36,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    
   }
   
   
