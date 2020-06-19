@@ -31,7 +31,10 @@ export class LoginComponent implements OnInit {
     if (response['success']) {
       const token = response['token'];
       localStorage.setItem('user-token', token);
-      localStorage.setItem('rol', response['rol']);
+      //Si el rol no es admin, que no se muestre el rol en el localStorage
+      if (response['rol'] === 'admin') {
+        localStorage.setItem('rol', response['rol']);
+      }
       this.router.navigate(['/home']);
     }
   }
