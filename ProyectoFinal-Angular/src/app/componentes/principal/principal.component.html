@@ -6,15 +6,15 @@
 </div>
 <div class="form">
     <ul class="grupo">
-        <li class="boton" (click)="mostrar(true)">REGISTRATE</li>
-        <li class="boton" (click)="mostrar(false)">INICIA SESION</li>
+        <li class="boton" (click)="mostrar(false)">REGISTRATE</li>
+        <li class="boton" (click)="mostrar(true)">INICIA SESION</li>
     </ul>
 
     <div class="content">
-        <div id="register" *ngIf="registro">
+        <div id="register" *ngIf="!registro">
             <app-register></app-register>
         </div>
-        <div id="login" *ngIf="!registro">
+        <div id="login" *ngIf="registro">
             <app-login></app-login>
         </div>
     </div>
