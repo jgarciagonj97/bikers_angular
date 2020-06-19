@@ -21,7 +21,4 @@ export class BlogComponent implements OnInit {
   clickBlog(pId) {
     this.router.navigate(['/blog', pId]);
   }
-
-
-
 }

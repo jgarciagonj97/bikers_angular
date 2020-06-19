@@ -19,8 +19,7 @@ export class BlogService {
   }
 
   async recuperarBlogActivo(idBlog) {
-    const post = await this.httpClient.get(`${this.baseUrl}/${idBlog}`);
-    console.log('recuperar blog activo:',post);
-    return post;
+    return  await this.httpClient.get(`${this.baseUrl}/${idBlog}`).toPromise();
+     
   }
 }
