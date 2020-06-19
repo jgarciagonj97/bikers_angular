@@ -16,7 +16,6 @@ export class BlogComponent implements OnInit {
 
   async ngOnInit() {
     this.arrBlog = await this.blogService.recuperarBlog();
-    console.log(this.arrBlog);
   }
 
   clickBlog(pId) {
