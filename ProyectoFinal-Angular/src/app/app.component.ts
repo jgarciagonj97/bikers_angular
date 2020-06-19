@@ -21,7 +21,11 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-
+    //Borra token e id a los 6 segundos si hay recarga en la página
+    setTimeout(() => {
+      localStorage.removeItem('user-token');
+      localStorage.removeItem('id');
+    }, 6000);
   }
 
   onClick() {
