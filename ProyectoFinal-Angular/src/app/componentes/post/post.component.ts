@@ -28,16 +28,12 @@ export class PostComponent implements OnInit {
     })
   }
 
-
   mostrarRelacionados() {
-    for (let i = 0; i < 4; i++) {
-      if (!this.arrRelacionados.includes(this.arrBlog[i]))
-        this.arrRelacionados.push(this.arrBlog[Math.floor(Math.random() * this.arrBlog.length)]);
-    }
+    for (let i = 0; i < 3; i++) 
+    this.arrRelacionados.push(this.arrBlog[Math.floor(Math.random() * this.arrBlog.length)]); 
   }
 
   clickPost(pId) {
-    console.log(pId)
     this.router.navigate(['/blog', pId]);
   }
 
