@@ -16,14 +16,16 @@
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
-.usuarios .descripcion{
+.usuarios .apellidos{
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
+    margin-top: -0.825em;
 }
 
 .usuarios .ciudad{
     font-style: italic;
-}
+    margin-top: -1.5em;
+  }
 
 .btn1{
     margin-left: 50%;
@@ -79,7 +81,7 @@
 
 .follow{
   color: #37a88b;
-  font-size: 2em;
+  font-size: 50px;
   transition: 0.4s all;
 }
 
@@ -102,4 +104,16 @@ img{
   /* padding: 5px 10px; */
   display: flex;
   flex-wrap: wrap;
+}
+
+.fotoperfil img{
+  width:5em;
+  height: 5em;
+  margin-left: -1em;
+}
+
+.formulario{
+  font-size: 1.25em;
+  color:lightskyblue;
+  cursor: pointer;
 }

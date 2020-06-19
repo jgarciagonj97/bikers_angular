@@ -36,6 +36,7 @@ export class AppComponent {
       if (result.value) {
         localStorage.removeItem('user-token');
         localStorage.removeItem('rol');
+        localStorage.removeItem('id');
         this.router.navigate(['/principal']);
       }
     })
