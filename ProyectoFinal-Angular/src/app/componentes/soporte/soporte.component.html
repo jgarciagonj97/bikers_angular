@@ -57,7 +57,7 @@
     <div class="col text-center">
         <h3 class="mt-5 mb-5">¡Envíanos tu consulta!</h3>
     </div>
-    <form [formGroup]="formContacto" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formContacto" (ngSubmit)="onSubmit()" >
         <div class="form-group col-md-6 d-inline-block">
             <label>Nombre</label>
             <input type="text" class="form-control" formControlName="nombre">

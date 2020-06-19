@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UsersService } from 'src/app/servicios/users.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class SoporteComponent implements OnInit {
 
   formContacto: FormGroup;
 
-  constructor() {
+  constructor(private userService: UsersService) {
     this.formContacto = new FormGroup({
       nombre: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
@@ -24,8 +25,9 @@ export class SoporteComponent implements OnInit {
   }
 
 
-  onSubmit() {
+  async onSubmit() {
     //Enviar email a la dirección de contacto que creemos.
+    const response = await this.userService.mandarEmail(this.formContacto.value)
   }
 
   onClick($event) {
