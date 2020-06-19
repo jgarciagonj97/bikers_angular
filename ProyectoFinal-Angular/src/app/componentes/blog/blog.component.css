@@ -1,21 +1,20 @@
 *{
+  margin:0;
+  padding: 0;
   box-sizing: border-box;
 }
-
 
 img {
   width: 100%;
   height: auto;
-  padding: 5px;
 }
 
 .funciona{
   cursor: pointer;
 }
 
-
 .card {
-  margin: 4%;
+  margin: 4%; 
   border: none;
   box-shadow: 0 4px 8px rgba(165, 165, 165, .6);
   transition: 0.3s all ease;
@@ -121,4 +120,9 @@ img {
 }
 .post{
   cursor: pointer;
+}
+
+.imagen{
+  width: 100%;
+  height: auto;
 }

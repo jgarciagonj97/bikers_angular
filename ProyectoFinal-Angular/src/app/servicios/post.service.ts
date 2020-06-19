@@ -8,30 +8,31 @@ import { HttpClient } from '@angular/common/http';
 export class PostService {
 
   baseUrl: string;
-  id: number;
+  id: string;
   usuario: any;
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'https://bikers1.herokuapp.com/api';
-    this.id = 0;
+    this.id = '';
     this.usuario = {};
   }
-  recibirId(pId) {
-    this.id = pId;
-  }
+
+
   cargarNovedades(): Promise<any> {
+    this.id = localStorage.getItem('id');
     //console.log(`${this.baseUrl}/posts/home/${this.id} `);
     return this.httpClient.get(`${this.baseUrl}/posts/home/${this.id}`).toPromise();
-    
+
   }
   obtenerId(pEmail): Promise<any> {
     return this.httpClient.get(`${this.baseUrl}/users/id/${pEmail}`).toPromise();
   }
-  async obtenerUsuario(pEmail):Promise<any>{
-    this.usuario = await this.httpClient.get(`${this.baseUrl}/users/email/${pEmail}`).toPromise();
+  async obtenerUsuario(pId): Promise<any> {
+    this.usuario = await this.httpClient.get(`${this.baseUrl}/users/${pId}`).toPromise();
+
     //console.log(this.usuario);
     return this.usuario;
   }
-  recuperarEmail(){
+  recuperarEmail() {
     return this.usuario.email;
   }
 

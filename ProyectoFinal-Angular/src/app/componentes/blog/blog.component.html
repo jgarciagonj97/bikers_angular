@@ -16,20 +16,17 @@
 
 
 <div class="post row col-12">
-<!-- Arreglar click -->
-    <div class="card col-3" *ngFor="let blog of arrBlog">
-        <div >
-            <img class="imagen" src="{{blog.imagen}}">
-            <div class="fecha">{{blog.fecha}}</div>
-            <div class="cuerpo">
-                <h5 class="title">{{blog.titulo}}</h5>
-                <p class="text">{{blog.texto}}</p>
-                <button (click)="clickBlog($event.target)">Ir</button>
-            </div>
+    <!-- Arreglar click -->
+    <div class="card col-sm-12 col-md-3" (click)="clickBlog(blog.id)" *ngFor="let blog of arrBlog">
+        <img class="imagen" src="{{blog.imagen}}">
+        <div class="fecha">{{blog.fecha}}</div>
+        <div class="cuerpo">
+            <h5 class="title">{{blog.titulo}}</h5>
+            <p class="text">{{blog.texto}}</p>
+            <button>Ir</button>
         </div>
 
     </div>
 
 
 </div>
-<router-outlet></router-outlet>

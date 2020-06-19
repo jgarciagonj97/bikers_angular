@@ -22,10 +22,9 @@ const routes: Routes = [
   },
   { path: 'home', component: HomeComponent, canActivate: [LoginGuard] },
   {
-    path: 'blog',
-    component: BlogComponent, canActivate: [LoginGuard],
-    children: [{ path: ':idPost', component: PostComponent }],
+    path: 'blog', component: BlogComponent, canActivate: [LoginGuard],
   },
+  { path: 'blog/:idPost', component: PostComponent },
   { path: 'browser', component: BuscadorComponent, canActivate: [LoginGuard] },
   { path: 'newPost', component: FormularioComponent, canActivate: [LoginGuard] },
   { path: 'support', component: SoporteComponent, canActivate: [LoginGuard] },
