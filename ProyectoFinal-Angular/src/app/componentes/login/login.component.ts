@@ -27,8 +27,9 @@ export class LoginComponent implements OnInit {
   async onSubmit() {
     const response = await this.loginservice.login(this.formLogin.value);
     const id = await this.postService.obtenerId(this.formLogin.value.email);
-    localStorage.setItem('id', id);
-    this.postService.obtenerUsuario(id)
+    localStorage.setItem('id', id[0].id);
+    console.log(response);
+    //const usuario = this.postService.obtenerUsuario(id[0].id);
     if (response['success']) {
       const token = response['token'];
       localStorage.setItem('user-token', token);

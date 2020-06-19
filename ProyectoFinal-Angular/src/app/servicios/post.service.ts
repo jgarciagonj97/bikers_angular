@@ -27,8 +27,8 @@ export class PostService {
     return this.httpClient.get(`${this.baseUrl}/users/id/${pEmail}`).toPromise();
   }
   async obtenerUsuario(pId): Promise<any> {
-    this.usuario = await this.httpClient.get(`${this.baseUrl}/users/${pId}`).toPromise();
-
+    console.log(pId)
+    this.usuario = await this.httpClient.get(`${this.baseUrl}/users/get/${pId}`).toPromise();
     //console.log(this.usuario);
     return this.usuario;
   }
