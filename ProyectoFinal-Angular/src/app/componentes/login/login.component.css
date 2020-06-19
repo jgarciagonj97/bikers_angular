@@ -49,16 +49,17 @@
   padding: 12px;
 }
 
-.footer a {
+.footer div {
   text-decoration: none;
   color: #fff;
   background-color: #25232A;
   padding: 10px;
 }
 
-.footer a:hover {
+.footer div:hover {
   text-decoration: none;
   color: rgb(15, 183, 224);
+  cursor: pointer;
 }
 
 .borde {
