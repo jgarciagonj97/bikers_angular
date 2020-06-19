@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/servicios/users.service';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-soporte',
@@ -23,11 +23,14 @@ export class SoporteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
-  async onSubmit() {
-    //Enviar email a la dirección de contacto que creemos.
-    const response = await this.userService.mandarEmail(this.formContacto.value)
+  contactForm(form) {
+    this.userService.mandarEmail(form).subscribe(() => {
+    Swal.fire('Formulario de contacto', 'Mensaje enviado correctamente', 'success');
+    });
+    }
+  
+   onSubmit() {
+   
   }
 
   onClick($event) {

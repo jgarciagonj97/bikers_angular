@@ -15,6 +15,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { UsersService } from './servicios/users.service';
 
 
 
@@ -39,7 +40,7 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
