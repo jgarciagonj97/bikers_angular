@@ -38,7 +38,7 @@ export class FormularioComponent implements OnInit {
     fd.append("titulo", this.formulario.controls.titulo.value);
     let header = new HttpHeaders();
     header.append('Content-Type', 'multipart/form-data');
-    const req = new HttpRequest("POST", "http://localhost:3000", fd, {
+    const req = new HttpRequest("POST", "https://bikers1.herokuapp.com/", fd, {
       headers: header
     });
     this.http
