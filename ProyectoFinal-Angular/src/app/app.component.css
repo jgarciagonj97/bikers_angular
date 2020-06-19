@@ -133,4 +133,18 @@ li i {
   color: white;
 }
 
-/* medias queries */
+@media (max-width: 600px){
+
+  .footer .redes ul .segundo{
+    margin: 0 1.2em;
+  }
+
+  .footer ul li p {
+    font-size: 0.825em;
+  }
+
+  .footer-copyright{
+    font-size: 0.7em;
+  }
+
+}

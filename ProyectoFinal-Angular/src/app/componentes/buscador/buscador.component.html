@@ -6,26 +6,25 @@
                 <a href="#" class="icon"><i class="fas fa-search"></i></a>
             </div>
         </div>
-    </div> 
+    </div>
     <div class="usuarios mb-1">
         <p class="personas">Personas</p>
         <div class="row m-1 marco" *ngFor="let user of arrUsers">
             <div class="col-2 fotoperfil">
-                <img src="../../../assets/img/usuario.jpg" >
+                <img src="../../../assets/img/usuario.jpg">
             </div>
-            
+
             <div class="col-8">
                 <h6 class="nombre">{{user.nombre}}</h6>
                 <p class="apellidos">{{user.apellidos}}</p>
                 <p class="ciudad">{{user.ciudad}}</p>
             </div>
             <div class="col-2 agregarUser">
-                <a href="#" class="follow"><i class="fas fa-user-plus"></i></a>
-                
+                <i class="fas fa-user-plus formulario"></i>
             </div>
         </div>
-        
-       
-       
+
+
+
     </div>
 </div>

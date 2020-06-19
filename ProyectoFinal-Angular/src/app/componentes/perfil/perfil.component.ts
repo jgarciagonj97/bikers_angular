@@ -31,7 +31,7 @@ export class PerfilComponent implements OnInit {
 
   async ngOnInit() {
     this.user = await this.postService.obtenerUsuario(
-      this.postService.recuperarEmail()
+      localStorage.getItem('id')
     );
     this.formUpdate = new FormGroup({
       nombre: new FormControl(this.user.nombre),

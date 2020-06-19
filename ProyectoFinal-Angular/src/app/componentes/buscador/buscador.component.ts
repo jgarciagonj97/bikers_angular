@@ -9,14 +9,14 @@ import { Usuario } from 'src/app/models/usuario.model';
 })
 export class BuscadorComponent implements OnInit {
   arrUsers: Usuario[];
-  constructor(private userService: UsersService) { 
+
+  constructor(private userService: UsersService) {
     this.arrUsers = new Array;
   }
 
   async ngOnInit() {
     this.arrUsers = await this.userService.users();
-    
   }
 
-  
+
 }

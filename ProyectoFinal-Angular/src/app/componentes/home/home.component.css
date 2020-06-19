@@ -7,21 +7,26 @@
 #carrusel{
     height: 50vh;
 }
+
 #carrusel .carousel-inner{
     height: 50vh;
 }
+
 .carousel-item{
     height: 50vh;
-    min-height: 450px;
+    /* min-height: 450px; */
 }
+
 .post{
-    border: 2px solid black;
     padding: 15px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
 }
+
 .foto{
     width: 100%;
     height: auto;
 }
+
 .foto img{
     width: 100%;
     height: auto;
@@ -41,8 +46,49 @@
     opacity: 0.8;
     width: 100%;
     padding: 0.30em;
-  }
+}
 
 li{
     color: #37a88b;
+}
+
+@media(max-width:600px){
+
+    #carrusel{
+        height: 20vh;
+    }
+
+    #carrusel .carousel-inner{
+        height: 20vh;
+    }
+
+    .carousel-item{
+        height: 20vh;
+    }
+
+    .titulo{
+        font-size: 2em;
+        margin: 0;
+    }
+
+}
+
+@media (min-width:601px) and (max-width:1024px){
+
+     #carrusel{
+        height: 26vh;
+    }
+
+    #carrusel .carousel-inner{
+        height: 26vh;
+    }
+
+    .carousel-item{
+        height: 26vh;
+    }
+
+    .titulo{
+        margin: 0;
+    }
+
 }

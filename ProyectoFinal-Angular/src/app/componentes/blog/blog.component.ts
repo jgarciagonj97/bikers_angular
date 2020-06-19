@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from 'src/app/servicios/blog.service';
 import { PostBlog } from 'src/app/models/postBlog.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -8,8 +9,8 @@ import { PostBlog } from 'src/app/models/postBlog.model';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
- arrBlog: PostBlog[];
-  constructor(private blogService:BlogService) { 
+  arrBlog: PostBlog[];
+  constructor(private blogService: BlogService, private router: Router) {
     this.arrBlog = new Array;
   }
 
@@ -18,8 +19,8 @@ export class BlogComponent implements OnInit {
     console.log(this.arrBlog);
   }
 
-  clickBlog($event){
-    console.log($event);
+  clickBlog(pId) {
+    this.router.navigate(['/blog', pId]);
   }
 
 

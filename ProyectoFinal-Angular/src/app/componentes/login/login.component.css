@@ -5,9 +5,11 @@
   background-position: left;
 
 }
+
 .contenedor{
-  height: 91.15vh;
+  min-height: 91.15vh;
 }
+
 .login-wrapper .login-btn {
   padding: 13px 20px;
   background-color: #25232A;
@@ -65,4 +67,36 @@
 .borde {
   margin-top: 7%;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 600px) {
+
+.login-title{
+  display: none;
+}
+
+.forgot-password-link{
+  font-size: 0.7em;
+}
+
+.register{
+  font-size: 0.7em;
+}
+
+}
+
+@media (min-width:601px) and (max-width: 1024px){
+
+.forgot-password-link{
+  font-size: 0.7em;
+}
+
+.register{
+  font-size: 0.7em;
+}
+
+.contenedor{
+  min-height: 0;
+} 
+
 }

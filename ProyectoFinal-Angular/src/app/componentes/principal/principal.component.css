@@ -34,19 +34,51 @@
     text-align: center;
     background-color: #25232A
 }
+
 .logo{
-    width: 100px;
+    width: 6.250em;
     height: auto;
 }
-.letras{
-    margin-left: 100px;
-    margin-right: 100px;
+
+.logo2{
+    width: 6.250em;
+    height: auto;
 }
+
+.letras{
+    margin-left: 6.250em;
+    margin-right: 6.250em;
+}
+
 .content{
     background-image: url('../../../assets/img/fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
   }
-  
+
+@media (max-width: 600px) {
+
+  .logo{
+      display: none;
+  }
+
+  .letras{
+      display: none;
+  }
+
+  .logo2{
+      width: 7.5em;
+  }
+
+  .grupo li{
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 1024px){
+
+    
+}
   

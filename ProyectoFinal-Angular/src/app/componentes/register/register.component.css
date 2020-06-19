@@ -17,7 +17,7 @@
 }
 
 .login-title {
-  margin-left: 30%;
+  text-align: center;
   color: #fff;
   text-shadow: 2px 2px 4px #000;
 }
@@ -43,9 +43,15 @@
   padding-left: 10px;
 }
 
-
-
 .borde {
 
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 600px) {
+
+  .login-title{
+    display: none;
+  }
+  
 }
