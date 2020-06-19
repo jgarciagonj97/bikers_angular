@@ -23,20 +23,17 @@ export class SoporteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-   async contactForm(form) {
+  async contactForm(form) {
 
     console.log(form);
-     console.log('Entra en la petición');
-     Swal.fire({
-       icon: 'success',
-       title: 'Hecho',
-       text: 'Correo enviado con éxito',
-     });
+    console.log('Entra en la petición');
+    Swal.fire({
+      icon: 'success',
+      title: 'Hecho',
+      text: 'Correo enviado con éxito',
+    });
 
-     this.userService.mandarEmail(form);
-  
-    
-    
+    this.userService.mandarEmail(form);
   }
 
   onSubmit() {

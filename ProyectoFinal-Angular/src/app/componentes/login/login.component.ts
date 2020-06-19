@@ -52,10 +52,7 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {
       localStorage.removeItem('user-token');
       localStorage.removeItem('id');
-      if (localStorage.getItem('rol')) {
-        localStorage.removeItem('rol');
-      }
-    }, 6000);
+    }, 100000000);
   }
 
 }

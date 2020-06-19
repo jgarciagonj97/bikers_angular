@@ -25,7 +25,7 @@ export class AppComponent {
     setTimeout(() => {
       localStorage.removeItem('user-token');
       localStorage.removeItem('id');
-    }, 6000);
+    }, 100000000);
   }
 
   onClick() {

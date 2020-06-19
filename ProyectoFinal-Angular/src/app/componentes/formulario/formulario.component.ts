@@ -30,6 +30,7 @@ export class FormularioComponent implements OnInit {
 
   onFileChange($event) {
     this.files = $event.target.files;
+    console.log(this.files);
   }
 
   onSubmit() {
