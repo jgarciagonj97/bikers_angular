@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from 'src/app/servicios/blog.service';
 import { PostBlog } from 'src/app/models/postBlog.model';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -10,21 +10,35 @@ import { Router } from '@angular/router';
 export class PostComponent implements OnInit {
   arrBlog: PostBlog[];
   post: any;
-  constructor(private blogService: BlogService, private router:Router) {
+  arrRelacionados: PostBlog[];
+
+
+  constructor(private blogService: BlogService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.arrBlog = new Array;
+    this.arrRelacionados = new Array;
 
   }
 
-  async ngOnInit() {
-    this.arrBlog = await this.blogService.recuperarBlog();
-    const id= this.router.url.split('/blog/')
-    for(let elemento of this.arrBlog){
-      if(elemento.id ===parseInt(id[1])) console.log(elemento.id);
-      this.post = elemento;
+   ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(async(params: ParamMap) => {
+      this.post = await this.blogService.recuperarBlogActivo(this.router.url.split('/blog/')[1]);
+      this.arrBlog = await this.blogService.recuperarBlog();
+      this.arrRelacionados=[];
+      this.mostrarRelacionados();
+    })
+  }
+
+
+  mostrarRelacionados() {
+    for (let i = 0; i < 4; i++) {
+      if (!this.arrRelacionados.includes(this.arrBlog[i]))
+        this.arrRelacionados.push(this.arrBlog[Math.floor(Math.random() * this.arrBlog.length)]);
     }
-    console.log(this.post)
-    //this.post = await this.blogService.recuperarBlogActivo(id[1])
-    //console.log(this.post);
+  }
+
+  clickPost(pId) {
+    console.log(pId)
+    this.router.navigate(['/blog', pId]);
   }
 
 }
