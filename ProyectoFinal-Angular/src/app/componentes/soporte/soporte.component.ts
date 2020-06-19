@@ -10,27 +10,37 @@ import Swal from 'sweetalert2';
 })
 export class SoporteComponent implements OnInit {
 
-  formContacto: FormGroup;
+  //formContacto: FormGroup;
 
   constructor(private userService: UsersService) {
-    this.formContacto = new FormGroup({
+    /* this.formContacto = new FormGroup({
       nombre: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       motivoConsulta: new FormControl('', Validators.required),
       consulta: new FormControl('', Validators.required)
-    });
+    }); */
   }
 
   ngOnInit(): void {
   }
-  contactForm(form) {
-    this.userService.mandarEmail(form).subscribe(() => {
-    Swal.fire('Formulario de contacto', 'Mensaje enviado correctamente', 'success');
-    });
-    }
+   async contactForm(form) {
+
+    console.log(form);
+     console.log('Entra en la petición');
+     Swal.fire({
+       icon: 'success',
+       title: 'Hecho',
+       text: 'Correo enviado con éxito',
+     });
+
+     this.userService.mandarEmail(form);
   
-   onSubmit() {
-   
+    
+    
+  }
+
+  onSubmit() {
+
   }
 
   onClick($event) {

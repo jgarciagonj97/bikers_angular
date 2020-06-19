@@ -28,7 +28,7 @@ export class UsersService {
     return this.httpClient.get(`${this.baseUrl}/api/users/`).toPromise();
   }
 
-  mandarEmail(body){
-    return this.httpClient.post(`${this.baseUrl}/api/formulario`, body)
+   mandarEmail(body){
+    return  this.httpClient.post(`${this.baseUrl}/api/sendEmail`, body).toPromise()
   }
 }
