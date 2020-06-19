@@ -10,21 +10,19 @@
     <div class="usuarios mb-1">
         <p class="personas">Personas</p>
         <div class="row m-1 marco" *ngFor="let user of arrUsers">
-            <div class="col-2 fotoperfil">
+            <div class="col-3 col-md-1 fotoperfil">
                 <img src="../../../assets/img/usuario.jpg">
             </div>
 
-            <div class="col-8">
+            <div class="col-7 col-md-9">
                 <h6 class="nombre">{{user.nombre}}</h6>
                 <p class="apellidos">{{user.apellidos}}</p>
                 <p class="ciudad">{{user.ciudad}}</p>
             </div>
-            <div class="col-2 agregarUser">
+            <div class="col-2 col-md-2 agregarUser">
                 <i class="fas fa-user-plus formulario"></i>
+                <!-- <i class="fas fa-user-check"></i> -->
             </div>
         </div>
-
-
-
     </div>
 </div>

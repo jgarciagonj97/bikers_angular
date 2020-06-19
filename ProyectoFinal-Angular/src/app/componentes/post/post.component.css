@@ -9,8 +9,7 @@ img{
 }
 
 .post img{
-    width: 98.5%;
-    margin: 0.6em;
+    width: 100%;
 }
 
 .post h3{
@@ -59,4 +58,12 @@ img{
 
 .articulo p{
     padding: 0 5%;
+}
+
+@media (max-width: 600px){
+    
+    .articulo{
+        width: 45%;
+    }
+
 }
