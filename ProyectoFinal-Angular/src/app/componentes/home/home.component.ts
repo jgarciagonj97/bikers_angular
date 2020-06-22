@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit {
     this.arrNovedades = new Array()
     this.formNewpost = new FormGroup({
       titulo: new FormControl(''),
-      descripcion: new FormControl('')
+      descripcion: new FormControl(''),
+      id: new FormControl(parseInt(localStorage.getItem('id')))
     })
   }
 
@@ -24,9 +25,9 @@ export class HomeComponent implements OnInit {
   console.log(this.arrNovedades)
   }
 
-  onSubmit(){
+  async onSubmit(){
     /* crear post*/
-    this.postService.crearPost(this.formNewpost.value)
+    await this.postService.crearPost(this.formNewpost.value)
 
   }
 }

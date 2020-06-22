@@ -37,9 +37,9 @@ export class PostService {
   }
 
   async crearPost(formValues){
-    
+    console.log(formValues)
     return await this.httpClient
-      .post(`${this.baseUrl}/api/posts/${localStorage.getItem('id')}`, formValues)
+      .post(`${this.baseUrl}/posts/${localStorage.getItem('id')}`, formValues)
       .toPromise();
   }
 
