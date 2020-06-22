@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/app/servicios/post.service';
 import { PostUsuario } from 'src/app/models/postUsuario.model';
-import { FormGroup, FormControl } from '@angular/forms';
 import { FirebaseStorageService } from 'src/app/servicios/firebase-storage.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
 
@@ -21,8 +21,11 @@ export class HomeComponent implements OnInit {
   constructor(private postService: PostService, private firebaseStorage: FirebaseStorageService) {
     this.arrNovedades = new Array()
     this.formNewpost = new FormGroup({
-      titulo: new FormControl(''),
-      descripcion: new FormControl(''),
+      titulo: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+      ]),
+      descripcion: new FormControl('', [Validators.required]),
       archivo: new FormControl(''),
       id: new FormControl(parseInt(localStorage.getItem('id')))
     })
