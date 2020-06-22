@@ -1,53 +1,68 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { HttpHeaders, HttpRequest, HttpClient } from '@angular/common/http';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FirebaseStorageService } from '../../servicios/firebase-storage.service';
+import { getLocaleDateFormat } from '@angular/common';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
+
 export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
-  fechaActual: any;
-  files;
+  datosFormulario: FormData;
+  nombreArchivo: string;
+  URLPublica: string;
+  fechaActual: Date;
 
-  constructor(private http: HttpClient) {
+  constructor(private firebaseStorage: FirebaseStorageService) {
     this.formulario = new FormGroup({
-      titulo: new FormControl(""),
-      autor: new FormControl(""),
-      texto: new FormControl(""),
-      file: new FormControl("")
+      archivo: new FormControl(null, [
+        Validators.required
+      ]),
+      titulo: new FormControl("", [
+        Validators.required,
+        Validators.minLength(5)
+      ]),
+      texto: new FormControl("", [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(100)
+      ]),
     });
-    // this.fechaActual = new Date(Date.now())
-    //   .toLocaleDateString()
-    //   .replace(/\//g, '-');
+    this.datosFormulario = new FormData();
+    this.nombreArchivo = '';
+    this.URLPublica = '';
+    this.fechaActual = new Date();
   }
 
   ngOnInit(): void {
   }
 
-  onFileChange($event) {
-    this.files = $event.target.files;
-    console.log(this.files);
+  //Evento que se gatilla cuando el input de tipo archivo cambia
+  cambioArchivo(event) {
+    if (event.target.files.length > 0) {
+      for (let i = 0; i < event.target.files.length; i++) {
+        this.nombreArchivo = event.target.files[i].name;
+        this.datosFormulario.delete('archivo');
+        this.datosFormulario.append('archivo', event.target.files[i], event.target.files[i].name)
+      }
+    }
   }
 
-  onSubmit() {
-    let fd = new FormData();
-    fd.append("imagen", this.files[0], "nuevaImagen.png");
-    fd.append("titulo", this.formulario.controls.titulo.value);
-    let header = new HttpHeaders();
-    header.append('Content-Type', 'multipart/form-data');
-    const req = new HttpRequest("POST", "https://bikers1.herokuapp.com/", fd, {
-      headers: header
+  //Sube el archivo a Cloud Storage
+  subirArchivo() {
+    let archivo = this.datosFormulario.get('archivo');
+    let referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo);
+    this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
+
+    referencia.getDownloadURL().subscribe((URL) => {
+      this.URLPublica = URL;
+      console.log(this.URLPublica);
     });
-    this.http
-      .request(req)
-      .toPromise()
-      .then(result => {
-        console.log(result);
-      });
+    this.formulario.reset();
   }
 
 }
