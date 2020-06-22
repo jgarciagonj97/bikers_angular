@@ -65,7 +65,6 @@ export class FormularioComponent implements OnInit {
       await this.blogservice.insertarBlog(this.formulario.value);
       this.formulario.reset();
     });
-
   }
 
 }
