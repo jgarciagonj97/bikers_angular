@@ -13,7 +13,7 @@ export class PrincipalComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  mostrar(isRegistro) {
+  mostrar(isRegistro) { 
 
     this.registro = isRegistro;
 

@@ -97,6 +97,7 @@ img{
 .personas{
   font-size: 25px;
   margin-left: 1%;
+  border-bottom:1px solid #ccc;
 }
 
 .marco{
@@ -112,8 +113,21 @@ img{
   margin-left: -1em;
 }
 
-.formulario{
-  font-size: 2em;
-  color:lightskyblue;
-  cursor: pointer;
+
+
+.agregarUser div{
+cursor: pointer;
+font-size: 2em;
+margin-top:0.5em;
+}
+
+.agregarUser .fa-user-plus{
+color: lightskyblue;
+}
+.agregarUser .fa-user-check:hover{
+color: red;
+}
+
+.agregarUser .fa-user-check{
+color: rgb(25, 179, 25);
 }

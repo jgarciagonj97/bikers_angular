@@ -12,6 +12,8 @@ export class Usuario {
     imagen:string;
     rol:string;
     
+    siguiendo:boolean;
+    
     
     
 
@@ -27,5 +29,6 @@ export class Usuario {
         this.fecha_nacimiento = fecha_nacimiento;
         this.imagen = imagen;
         this.rol = rol;
+        this.siguiendo = false;
     }
 }

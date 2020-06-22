@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../models/usuario.model';
+import { Seguidor } from '../models/seguidor.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +14,15 @@ export class SeguidoresService {
     this.baseUrl = 'https://bikers1.herokuapp.com/api/amigos';
   }
 
-    siguiendo() {
-      console.log('ENtra en siguiendo')
+  siguiendo(): Promise<any> {
     return this.httpClient.get(`${this.baseUrl}/${localStorage.getItem('id')}`).toPromise();
-   }
-   seguir(body){
-     console.log('entra en seguir a ',body);
-     console.log(`${this.baseUrl}/seguir/${localStorage.getItem('id')} `,body)
-     return this.httpClient.post(`${this.baseUrl}/seguir/${localStorage.getItem('id')}`,body).toPromise();
-     
-   }
+  }
+
+  seguir(body) {
+    return this.httpClient.post(`${this.baseUrl}/seguir/${localStorage.getItem('id')}`, body).toPromise();
+  }
+  dejarDeSeguir(idEliminar){
+    return this.httpClient.delete(`${this.baseUrl}/eliminar/${localStorage.getItem('id')}/${idEliminar}`).toPromise();
+  }
+
 }
