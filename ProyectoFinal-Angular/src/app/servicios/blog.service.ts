@@ -18,8 +18,12 @@ export class BlogService {
     return this.httpClient.get(this.baseUrl).toPromise();
   }
 
-  async recuperarBlogActivo(idBlog) {
-    return  await this.httpClient.get(`${this.baseUrl}/${idBlog}`).toPromise();
-     
+  recuperarBlogActivo(idBlog) {
+    return this.httpClient.get(`${this.baseUrl}/${idBlog}`).toPromise();
   }
+
+  insertarBlog(formValues) {
+    return this.httpClient.post(`${this.baseUrl}/create`, formValues).toPromise();
+  }
+
 }

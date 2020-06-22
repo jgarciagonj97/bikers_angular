@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/servicios/login.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
@@ -15,13 +15,27 @@ export class RegisterComponent implements OnInit {
 
   constructor(private loginService: LoginService, private router: Router) {
     this.formRegistro = new FormGroup({
-      nombre: new FormControl(),
-      apellidos: new FormControl(),
-      username: new FormControl(),
-      fecha_nacimiento: new FormControl(),
-      email: new FormControl(),
-      password: new FormControl(),
-      ciudad: new FormControl()
+      nombre: new FormControl('',[
+        Validators.required
+      ]),
+      apellidos: new FormControl('',[
+        Validators.required
+      ]),
+      username: new FormControl('',[
+        Validators.required
+      ]),
+      fecha_nacimiento: new FormControl('',[
+        Validators.required
+      ]),
+      email: new FormControl('',[
+        Validators.required
+      ]),
+      password: new FormControl('',[
+        Validators.required
+      ]),
+      ciudad: new FormControl('',[
+        Validators.required
+      ])
     })
   }
 
@@ -33,7 +47,9 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.loginService.registro(this.formRegistro.value)
       .then(response => {
+        
         if (response.success) {
+          console.log(response)
           this.formRegistro.reset();
           //Crear un alert con la libreria que hace los alerts chulos
           Swal.fire({

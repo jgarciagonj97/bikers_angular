@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/servicios/login.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PostService } from 'src/app/servicios/post.service';
 import Swal from 'sweetalert2';
@@ -16,8 +16,12 @@ export class LoginComponent implements OnInit {
 
   constructor(private loginservice: LoginService, private router: Router, private postService: PostService) {
     this.formLogin = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl()
+      email: new FormControl('', [
+        Validators.required
+      ]),
+      password: new FormControl('',[
+        Validators.required
+      ])
     });
 
   }

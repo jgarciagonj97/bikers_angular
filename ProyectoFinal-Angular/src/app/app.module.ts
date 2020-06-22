@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from '../environments/environment';
+
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './componentes/principal/principal.component';
 import { HomeComponent } from './componentes/home/home.component';
@@ -39,6 +43,8 @@ import { UsersService } from './servicios/users.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

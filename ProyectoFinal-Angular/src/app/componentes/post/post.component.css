@@ -4,7 +4,8 @@ img{
 }
 
 .post{
-    
+    margin: 0 auto;
+    width: 85%;
     box-shadow: 5px 5px 10px #999;
 }
 

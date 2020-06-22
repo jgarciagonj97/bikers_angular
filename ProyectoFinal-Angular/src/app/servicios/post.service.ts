@@ -10,6 +10,7 @@ export class PostService {
   baseUrl: string;
   id: string;
   usuario: any;
+
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'https://bikers1.herokuapp.com/api';
     this.id = '';
@@ -36,10 +37,10 @@ export class PostService {
     return this.usuario.email;
   }
 
-  async crearPost(formValues){
-    
+  async crearPost(formValues) {
+    console.log(formValues)
     return await this.httpClient
-      .post(`${this.baseUrl}/api/posts/${localStorage.getItem('id')}`, formValues)
+      .post(`${this.baseUrl}/posts/${localStorage.getItem('id')}`, formValues)
       .toPromise();
   }
 
