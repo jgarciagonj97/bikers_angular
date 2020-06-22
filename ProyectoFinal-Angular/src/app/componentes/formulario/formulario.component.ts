@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { FirebaseStorageService } from '../../servicios/firebase-storage.service';
-import { getLocaleDateFormat } from '@angular/common';
+import { BlogService } from 'src/app/servicios/blog.service';
 
 @Component({
   selector: 'app-formulario',
@@ -17,11 +17,8 @@ export class FormularioComponent implements OnInit {
   URLPublica: string;
   fechaActual: Date;
 
-  constructor(private firebaseStorage: FirebaseStorageService) {
+  constructor(private firebaseStorage: FirebaseStorageService, private blogservice: BlogService) {
     this.formulario = new FormGroup({
-      archivo: new FormControl(null, [
-        Validators.required
-      ]),
       titulo: new FormControl("", [
         Validators.required,
         Validators.minLength(5)
@@ -31,11 +28,13 @@ export class FormularioComponent implements OnInit {
         Validators.minLength(10),
         Validators.maxLength(100)
       ]),
+      archivo: new FormControl(''),
+      fecha: new FormControl(this.fechaActual = new Date())
     });
     this.datosFormulario = new FormData();
     this.nombreArchivo = '';
     this.URLPublica = '';
-    this.fechaActual = new Date();
+    // this.fechaActual = new Date();
   }
 
   ngOnInit(): void {
@@ -53,16 +52,20 @@ export class FormularioComponent implements OnInit {
   }
 
   //Sube el archivo a Cloud Storage
-  subirArchivo() {
+  async subirArchivo() {
     let archivo = this.datosFormulario.get('archivo');
     let referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo);
     this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
-
-    referencia.getDownloadURL().subscribe((URL) => {
+    referencia.getDownloadURL().subscribe(async (URL) => {
       this.URLPublica = URL;
+      this.formulario.value.archivo = this.URLPublica;
       console.log(this.URLPublica);
+      console.log(this.formulario.value);
+      //console.log(this.formulario.value.archivo = this.URLPublica);
+      await this.blogservice.insertarBlog(this.formulario.value);
+      this.formulario.reset();
     });
-    this.formulario.reset();
+
   }
 
 }
