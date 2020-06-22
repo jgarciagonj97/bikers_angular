@@ -36,6 +36,12 @@ export class PostService {
     return this.usuario.email;
   }
 
+  async crearPost(formValues){
+    
+    return await this.httpClient
+      .post(`${this.baseUrl}/api/posts/${localStorage.getItem('id')}`, formValues)
+      .toPromise();
+  }
 
 
 
