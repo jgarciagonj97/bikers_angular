@@ -8,7 +8,7 @@
 </div>
 <div class="col-12 mt-4 d-flex">
     <div class="barraBusqueda">
-        <input class="busqueda" type="text" name="" placeholder="Buscar...">
+        <input class="busqueda" type="text" name="" placeholder="Buscar..." (keyup)="buscarPost($event)">
         <a href="#" class="icon"><i class="fas fa-search"></i></a>
     </div>
 </div>
@@ -17,7 +17,7 @@
 
 <div class="post row col-12">
     <!-- Arreglar click -->
-    <div class="card col-sm-12 col-md-3" (click)="clickBlog(blog.id)" *ngFor="let blog of arrBlog">
+    <div class="card col-sm-12 col-md-3" (click)="clickBlog(blog.id)" *ngFor="let blog of arrFiltrados">
         <img class="imagen" src="{{blog.imagen}}">
         <div class="fecha">{{blog.fecha}}</div>
         <div class="cuerpo">

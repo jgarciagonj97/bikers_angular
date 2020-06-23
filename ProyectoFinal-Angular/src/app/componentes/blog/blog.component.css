@@ -78,6 +78,7 @@ img {
 .barraBusqueda {
   margin-bottom: auto;
   margin-top: auto;
+  margin: 0 auto;
   height: 60px;
   background-color: #353b48;
   border-radius: 30px;
@@ -97,7 +98,7 @@ img {
 
 .barraBusqueda>.busqueda {
   padding: 0 10px;
-  width: 93vw;
+  width: 35vw;
   caret-color: #37a88b;
   transition: width 0.4s linear;
 }
