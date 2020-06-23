@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
 
   formRegistro: FormGroup;
   mailAct: boolean;
+  usernameAct: boolean;
 
   constructor(private loginService: LoginService, private router: Router) {
     this.formRegistro = new FormGroup({
@@ -30,7 +31,7 @@ export class RegisterComponent implements OnInit {
         Validators.required
       ]),
       email: new FormControl('', [
-        Validators.required,
+        Validators.pattern(/^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/)
       ]),
       password: new FormControl('', [
         Validators.required
@@ -76,27 +77,19 @@ export class RegisterComponent implements OnInit {
   }
 
   async emailCorrecto(pControl) {
-    console.log(pControl.value);
     let emailRegistro = await this.loginService.validaMail(pControl.value);
     if (emailRegistro !== null) {
-      return { activo: this.mailAct = false }
+      return this.mailAct = false
     };
     return this.mailAct = true;
   }
 
   async usernameCorrecto(pControl) {
-    console.log(pControl.value);
     let usernameRegistro = await this.loginService.validaUsername(pControl.value);
     if (usernameRegistro !== null) {
-      return {
-        usernameIncorrecto:
-          Swal.fire({
-            icon: 'error',
-            title: 'Utiliza otro nombre de usuario',
-          })
-      };
+      return this.usernameAct = false;
     };
-    return null;
+    return this.usernameAct = true;
   }
 
 }
