@@ -4,7 +4,7 @@ import { Usuario } from 'src/app/models/usuario.model';
 import { SeguidoresService } from 'src/app/servicios/seguidores.service';
 import Swal from 'sweetalert2';
 import { Seguidor } from 'src/app/models/seguidor.model';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 
 @Component({
   selector: 'app-buscador',
@@ -17,14 +17,14 @@ export class BuscadorComponent implements OnInit {
   siguiendo: boolean;
   arrSiguiendo: Seguidor[];
 
-  constructor(private userService: UsersService, private seguidoresService: SeguidoresService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private userService: UsersService, private seguidoresService: SeguidoresService) {
     this.arrUsers = new Array;
     this.siguiendo = false;
     this.arrSiguiendo = new Array;
   }
 
   async ngOnInit() {
-    this.activatedRoute.paramMap.subscribe(async (params: ParamMap) => {
+    
       this.arrUsers = await this.userService.users();
       this.arrSiguiendo = await this.seguidoresService.siguiendo();
       //Algoritmo para no mostrar el id activo en la búsqueda de usuarios
@@ -39,7 +39,7 @@ export class BuscadorComponent implements OnInit {
           }
         }
       };
-    })
+    
   };
 
 
