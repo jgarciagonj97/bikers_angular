@@ -12,6 +12,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./buscador.component.css']
 })
 export class BuscadorComponent implements OnInit {
+
   arrUsers: Usuario[];
   siguiendo: boolean;
   arrSiguiendo: Seguidor[];
@@ -20,7 +21,6 @@ export class BuscadorComponent implements OnInit {
     this.arrUsers = new Array;
     this.siguiendo = false;
     this.arrSiguiendo = new Array;
-
   }
 
   async ngOnInit() {
@@ -62,8 +62,27 @@ export class BuscadorComponent implements OnInit {
     user.siguiendo = !user.siguiendo;
   }
 
-  dejarDeSeguir(user) {
+  async todos() {
+    return await this.userService.users();
+  }
 
+  buscarUsuario($event) {
+    let nombre = $event.target.value;
+    if (nombre === '') {
+      return this.todos();
+    } else {
+      return this.arrUsers = this.filtrarXNombre(this.arrUsers, nombre);
+    }
+  }
+
+  filtrarXNombre(pArray, pNombre) {
+    let usersFiltrado = new Array();
+    for (let usuario of pArray) {
+      if (usuario.nombre.toLowerCase().includes(pNombre.toLowerCase())) {
+        usersFiltrado.push(usuario);
+      }
+    }
+    return usersFiltrado;
   }
 
 }
