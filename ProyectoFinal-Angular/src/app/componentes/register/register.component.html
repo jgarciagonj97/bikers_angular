@@ -45,7 +45,8 @@
               placeholder="Introduce la ciudad donde vives">
           </div>
 
-          <input class="btn btn-block login-btn" type="submit" value="Registro">
+          <input class="btn btn-block login-btn" type="submit" value="Registro"
+            [disabled]="!formRegistro.valid || !mailAct">
         </form>
         <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
            -->

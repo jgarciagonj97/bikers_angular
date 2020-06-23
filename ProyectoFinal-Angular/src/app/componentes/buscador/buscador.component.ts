@@ -17,12 +17,14 @@ export class BuscadorComponent implements OnInit {
   siguiendo: boolean;
   arrSiguiendo: Seguidor[];
   arrFiltrados: Usuario[];
+  activo:boolean;
 
   constructor(private userService: UsersService, private seguidoresService: SeguidoresService) {
     this.arrUsers = new Array;
     this.siguiendo = false;
     this.arrSiguiendo = new Array;
     this.arrFiltrados = new Array();
+    this.activo = false;
   }
 
   async ngOnInit() {
@@ -33,11 +35,10 @@ export class BuscadorComponent implements OnInit {
       //Algoritmo para no mostrar el id activo en la búsqueda de usuarios
       for (let user of this.arrUsers) {
         if (user.id === parseInt(localStorage.getItem('id'))) {
-          let indice = this.arrUsers.indexOf(user);
-          this.arrUsers.splice(indice, 1);
+          user.siguiendo = true;
         };
-        for (let seguidor of this.arrSiguiendo) {
-          if (user.id === seguidor.fk_idUsuario2) {
+        for (let siguiendo of this.arrSiguiendo) {
+          if (user.id === siguiendo.fk_idUsuario2) {
             user.siguiendo = true;
           }
         }

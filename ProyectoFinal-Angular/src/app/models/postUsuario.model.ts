@@ -16,6 +16,6 @@ export class PostUsuario {
     this.fk_idUsuario = autor;
     this.descripcion = descripcion;
     this.imagen = imagen;
-    this.nombre= nombre;;
+    this.nombre = nombre;;
   }
 }
