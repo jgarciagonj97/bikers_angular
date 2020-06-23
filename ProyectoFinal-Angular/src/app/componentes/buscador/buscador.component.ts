@@ -62,8 +62,4 @@ export class BuscadorComponent implements OnInit {
     user.siguiendo = !user.siguiendo;
   }
 
-  dejarDeSeguir(user) {
-
-  }
-
 }
