@@ -33,29 +33,54 @@
 }
 
 .post{
-    padding: 15px;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
+    position: relative;
+    box-shadow: 0.250em 0 0.625em rgba(0, 0, 0, 0.8),  -0.250em 0 0.625em rgba(0,0,0,0.8);
+    width: 50%;
+}
+.autor{
+    position: absolute;
+    top: 0.50em;
+    padding: 0.313em;
+    right: 0.50em;
+    background-color: #37a88b;
+    color: white;
+    font-size: 1.250em;
+    font-weight: bold;
 }
 
-.foto{
-    width: 100%;
-    height: auto;
-}
 
-.foto img{
-    width: 100%;
-    height: auto;
-}
 
-.contenedor{
+.foto {
+    width: 31.250em;
+    height: 31.250em;
+}
+.cuerpo .foto{
+    width: 30%;
+}
+.cuerpo .texto{
+    width: 70%;
+    text-align: justify;
+    padding: 3.125em;
+    
+}
+.container{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin: 0 auto;
 }
-
+.titulo2{
+    text-align: center;
+    font-size: 25px;
+    background-color: #25232A;
+    color: #37a88b;
+    opacity: 0.8;
+    width: 100%;
+    padding: 0.30em;
+}
 .titulo {
     text-align: center;
-    font-size: 50px;
+    font-size: 3.125em;
     background-color: #25232A;
     color: #ccc;
     opacity: 0.8;

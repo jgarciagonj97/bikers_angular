@@ -4,7 +4,7 @@ import { Usuario } from 'src/app/models/usuario.model';
 import { SeguidoresService } from 'src/app/servicios/seguidores.service';
 import Swal from 'sweetalert2';
 import { Seguidor } from 'src/app/models/seguidor.model';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 
 @Component({
   selector: 'app-buscador',
@@ -18,7 +18,7 @@ export class BuscadorComponent implements OnInit {
   arrSiguiendo: Seguidor[];
   arrFiltrados: Usuario[];
 
-  constructor(private userService: UsersService, private seguidoresService: SeguidoresService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private userService: UsersService, private seguidoresService: SeguidoresService) {
     this.arrUsers = new Array;
     this.siguiendo = false;
     this.arrSiguiendo = new Array;
@@ -26,7 +26,7 @@ export class BuscadorComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.activatedRoute.paramMap.subscribe(async (params: ParamMap) => {
+    
       this.arrUsers = await this.userService.users();
       this.arrFiltrados = this.arrUsers;
       this.arrSiguiendo = await this.seguidoresService.siguiendo();
@@ -42,7 +42,7 @@ export class BuscadorComponent implements OnInit {
           }
         }
       };
-    })
+    
   };
 
 

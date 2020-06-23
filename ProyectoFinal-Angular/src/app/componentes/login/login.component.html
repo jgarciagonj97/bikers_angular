@@ -22,7 +22,35 @@
           </form>
           <div class="d-flex justify-content-between">
             <div class="footer">
-              <div class="forgot-password-link">¿Olvidaste tu contraseña?</div>
+              <div class="forgot-password-link" data-toggle="modal" data-target="#modal">¿Olvidaste tu contraseña?</div>
+              
+            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Contraseña olvidada</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form [formGroup]="formPassword" (ngSubmit)="passwordOlvidada()">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Introduce tu email</label>
+                                    <input type="email" class="form-control" id="recipient-name"
+                                        formControlName="email">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn btn-primary" >Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
             </div>
             <div class="footer">
               <div class="register">Regístrate</div>
