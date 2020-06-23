@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/servicios/login.service';
-import { FormGroup, FormControl,Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PostService } from 'src/app/servicios/post.service';
 import Swal from 'sweetalert2';
+import { UsersService } from 'src/app/servicios/users.service';
+import { Usuario } from 'src/app/models/usuario.model';
+
 
 @Component({
   selector: 'app-login',
@@ -13,17 +16,23 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
+  formPassword: FormGroup;
 
-  constructor(private loginservice: LoginService, private router: Router, private postService: PostService) {
+  constructor(private loginservice: LoginService, private router: Router, private postService: PostService, private usersService: UsersService) {
     this.formLogin = new FormGroup({
       email: new FormControl('', [
         Validators.required
       ]),
-      password: new FormControl('',[
+      password: new FormControl('', [
         Validators.required
       ])
     });
 
+    this.formPassword = new FormGroup({
+      email: new FormControl('', [
+        Validators.required
+      ])
+    })
   }
 
   ngOnInit(): void {
@@ -59,4 +68,31 @@ export class LoginComponent implements OnInit {
     }, 100000000);
   }
 
+
+  async passwordOlvidada() {
+    const arrUsuarios: Usuario[] = await this.usersService.users();
+    let existe: boolean = false;
+    for (let usuario of arrUsuarios) {
+      if (usuario.email === this.formPassword.value.email) {
+        existe = true;
+      } 
+    }
+    if (existe===false) {
+      Swal.fire({
+        icon: 'error',
+        title: '¡Email no registrado!',
+        text: 'El email que has introducido no se encuentra registrado en nuestra aplicación. Introduce el email correcto o registrate',
+      });
+      this.formPassword.reset();
+    } else {
+      Swal.fire({
+        icon: 'success',
+        title: '¡Email enviado!',
+        text: 'Te hemos enviado un correo electrónico con las instrucciones para restablecer tu contraseña. Si no lo encuentras, revisa el buzón de correo no deseado.',
+      });
+      await this.usersService.resetPassword(this.formPassword.value);
+      this.formPassword.reset();
+    }
+    this.formPassword.reset();
+  }
 }

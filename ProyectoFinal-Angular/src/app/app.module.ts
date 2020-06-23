@@ -20,6 +20,7 @@ import { RegisterComponent } from './componentes/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { UsersService } from './servicios/users.service';
+import { RecuperarComponent } from './recuperar/recuperar.component';
 
 
 
@@ -35,7 +36,8 @@ import { UsersService } from './servicios/users.service';
     BuscadorComponent,
     LoginComponent,
     RegisterComponent,
-    FormularioComponent
+    FormularioComponent,
+    RecuperarComponent
   ],
   imports: [
     BrowserModule,

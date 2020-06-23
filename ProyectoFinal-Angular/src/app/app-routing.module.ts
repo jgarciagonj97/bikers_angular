@@ -11,6 +11,7 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 import { RegisterComponent } from './componentes/register/register.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { LoginGuard } from './guards/login.guard';
+import { RecuperarComponent } from './recuperar/recuperar.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'newPost', component: FormularioComponent, canActivate: [LoginGuard] },
   { path: 'support', component: SoporteComponent, canActivate: [LoginGuard] },
   { path: 'profile', component: PerfilComponent, canActivate: [LoginGuard] },
+  { path: 'recuperar' ,component: RecuperarComponent},
   { path: '**', redirectTo: 'home' },
 ];
 
