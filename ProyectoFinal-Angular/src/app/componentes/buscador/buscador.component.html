@@ -2,14 +2,14 @@
     <div class="mt-3 mb-3">
         <div class="col-12 mt-4 d-flex">
             <div class="barraBusqueda">
-                <input class="busqueda" type="text" name="" placeholder="Buscar..." (input)="buscarUsuario($event)">
+                <input class="busqueda" type="text" name="" placeholder="Buscar..." (keyup)="buscarUsuario($event)">
                 <a href="#" class="icon"><i class="fas fa-search"></i></a>
             </div>
         </div>
     </div>
     <div class="usuarios mb-1">
         <p class="personas">Personas</p>
-        <div class="row m-1 marco" *ngFor="let user of arrUsers">
+        <div class="row m-1 marco" *ngFor="let user of arrFiltrados">
             <div class="col-3 col-md-1 fotoperfil">
                 <img src="../../../assets/img/usuario.jpg">
             </div>
@@ -22,7 +22,6 @@
             <div class="col-2 col-md-2 agregarUser">
                 <div id="agregar" [ngClass]="{'fa-user-plus': !user.siguiendo, 'fa-user-check': user.siguiendo}"
                     class="fas " (click)="seguir(user)"></div>
-
             </div>
         </div>
     </div>

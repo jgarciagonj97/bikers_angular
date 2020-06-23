@@ -16,16 +16,19 @@ export class BuscadorComponent implements OnInit {
   arrUsers: Usuario[];
   siguiendo: boolean;
   arrSiguiendo: Seguidor[];
+  arrFiltrados: Usuario[];
 
   constructor(private userService: UsersService, private seguidoresService: SeguidoresService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.arrUsers = new Array;
     this.siguiendo = false;
     this.arrSiguiendo = new Array;
+    this.arrFiltrados = new Array();
   }
 
   async ngOnInit() {
     this.activatedRoute.paramMap.subscribe(async (params: ParamMap) => {
       this.arrUsers = await this.userService.users();
+      this.arrFiltrados = this.arrUsers;
       this.arrSiguiendo = await this.seguidoresService.siguiendo();
       //Algoritmo para no mostrar el id activo en la búsqueda de usuarios
       for (let user of this.arrUsers) {
@@ -62,16 +65,12 @@ export class BuscadorComponent implements OnInit {
     user.siguiendo = !user.siguiendo;
   }
 
-  async todos() {
-    return await this.userService.users();
-  }
-
   buscarUsuario($event) {
     let nombre = $event.target.value;
-    if (nombre === '') {
-      return this.todos();
+    if (nombre !== '') {
+      this.arrFiltrados = this.filtrarXNombre(this.arrUsers, nombre);
     } else {
-      return this.arrUsers = this.filtrarXNombre(this.arrUsers, nombre);
+      this.arrFiltrados = this.arrUsers;
     }
   }
 
