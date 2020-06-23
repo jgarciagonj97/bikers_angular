@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from '../models/usuario.model';
 import { Seguidor } from '../models/seguidor.model';
 
 @Injectable({
@@ -21,8 +20,13 @@ export class SeguidoresService {
   seguir(body) {
     return this.httpClient.post(`${this.baseUrl}/seguir/${localStorage.getItem('id')}`, body).toPromise();
   }
+
   dejarDeSeguir(idEliminar){
     return this.httpClient.delete(`${this.baseUrl}/eliminar/${localStorage.getItem('id')}/${idEliminar}`).toPromise();
+  }
+
+  seguidores(): Promise<any>{
+    return this.httpClient.get(`${this.baseUrl}/seguidores/${localStorage.getItem('id')}`).toPromise();
   }
 
 }
