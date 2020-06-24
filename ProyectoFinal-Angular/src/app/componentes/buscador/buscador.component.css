@@ -124,11 +124,14 @@ margin-top:0.5em;
 .agregarUser .fa-user-plus{
 color: lightskyblue;
 }
-.agregarUser .fa-user-check:hover{
-color: red;
-}
+
 
 .agregarUser .fa-user-check{
 color: rgb(25, 179, 25);
 
+}
+@media (min-width: 1200px) {
+ .agregarUser .fa-user-check:hover{
+color: red;
+} 
 }
