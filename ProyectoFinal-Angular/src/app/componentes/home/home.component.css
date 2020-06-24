@@ -51,7 +51,9 @@
 
 .posts{
     font-size: 1em;
+    
 }
+
 
 .foto {
     width: 31.250em;
@@ -152,7 +154,7 @@ li{
 
 }
 
-@media (min-width:601px) and (max-width:1024px){
+@media (min-width:601px) and (max-width:1200px){
 
      #carrusel{
         height: 26vh;
@@ -169,5 +171,19 @@ li{
     .titulo{
         margin: 0;
     }
+
+    .cuerpo .foto{
+        width: 100%;
+    }
+    
+    .cuerpo .texto{
+        width: 100%;
+        
+    }
+    .cuerpo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 
 }
