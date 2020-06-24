@@ -2,12 +2,17 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-12 col-xs-12">
-            <div>
-                <h4>Seguidores: {{seguidores}}</h4>
-                <h4>Siguiendo: {{siguiendo}}</h4>
+            <div class="panel">
+                <div class="seguidores">
+                    <h5>Seguidores: {{seguidores}}</h5>
+                </div>
+                <div class="siguiendo">
+                    <h5>Siguiendo: {{siguiendo}}</h5>
+                </div>
+
             </div>
             <img src="../../assets/img/letras.png">
-        </div> 
+        </div>
         <div class="col-md-6 col-sm-12 col-xs-12">
             <h3 class="titulo2">Editar Perfil</h3>
             <div class="datos">
@@ -36,7 +41,7 @@
                     <input type="hidden" formControlName="password">
                     <input type="submit" class="btn btn-primary btn-small m-1" value="Guardar">
                 </form>
-                
+
             </div>
         </div>
     </div>
