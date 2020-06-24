@@ -39,7 +39,6 @@ button {
 header .navbar{
   background-color: #24252a;
   display: flex;
-  
 }
 
 
@@ -50,14 +49,11 @@ header .navbar{
 .navbar ul li {
   text-align: center;
   padding-bottom: 15px;
-
-
 }
+
 .navbar .line{
   padding:0.438em;
-
 }
-
 
 .nav_menu li .line:hover{
   border-bottom: 2px solid #37a88b;
@@ -91,9 +87,11 @@ button {
 .logout i{
   color: #edf0f1;
 }
+
 .contact:hover {
   background-color: rgba(15, 183, 224, 0.8);
 }
+
 .newpost {
   background-color: rgb(32, 202, 103);
 }
@@ -154,15 +152,25 @@ li i {
   .logo {
    margin-left:3em ;
   }
+
+  .navbar .line{
+  font-size: 1em;
+}
   
 }
 
-@media (min-width: 601px) and (min-width: 601px){
+@media (min-width: 601px) and (max-width: 1000px){
+
     .navbar-nav{
       margin-top: 1.2em;
     }
+
     .logo {
       margin-left:3em ;
-     }
+    }
+
+    .navbar-nav .line{
+      font-size: 1em;
+    }
      
 } 

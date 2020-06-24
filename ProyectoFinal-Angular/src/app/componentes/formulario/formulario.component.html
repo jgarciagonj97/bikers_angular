@@ -1,6 +1,6 @@
 <div class="titulo">
     <h2>
-        CREAR POSTS
+        CREAR POST
     </h2>
 </div>
 <!-- titulo, descripcion, autor -->
@@ -29,7 +29,7 @@
             </div>
             <div class="form-group row">
                 <label class="col-md-1 col-form-label">Fecha</label>
-                <div class="col-md-11">A fecha de {{fechaActual|date:'dd-MM-yyyy'}}</div>
+                <div class="col-md-11 mt-2">A fecha de {{fechaActual|date:'dd-MM-yyyy'}}</div>
             </div>
             <div class="form-group row">
                 <label class="col-md-1 col-form-label">Imagen</label>
@@ -42,5 +42,8 @@
                 [disabled]="!formulario.valid || nombreArchivo==''">Enviar</button>
             <input type="hidden" class="form-control-file" formControlName="fecha" value={{fechaActual}}>
         </form>
+        <div class="bici">
+            <img src="../../../assets/img/logoBici.png" class="bici2">
+        </div>
     </div>
 </div>
