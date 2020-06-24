@@ -6,6 +6,12 @@
 
 }
 
+.error{
+    color: red;
+    font-size: 0.825em;
+    font-weight: 700;
+}
+
 .login-wrapper .login-btn {
   padding: 13px 20px;
   background-color: #25232A;
@@ -44,7 +50,6 @@
 }
 
 .borde {
-
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
 }
 
