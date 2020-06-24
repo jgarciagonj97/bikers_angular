@@ -49,21 +49,14 @@ export class BuscadorComponent implements OnInit {
 
   async seguir(user) {
     if (user.siguiendo) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Hecho',
-        text: 'Usuario eliminado con éxito',
-      });
       await this.seguidoresService.dejarDeSeguir(user.id);
     } else if (!user.siguiendo) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Hecho',
-        text: 'Usuario seguido con éxito',
-      });
       await this.seguidoresService.seguir(user);
     }
-    user.siguiendo = !user.siguiendo;
+    setTimeout(() => {
+     user.siguiendo = !user.siguiendo; 
+    }, 200);
+    
   }
 
   buscarUsuario($event) {
