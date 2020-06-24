@@ -28,26 +28,29 @@ form div {
   color: #ccc;
   opacity: 0.8;
   width: 100%;
+  font-family: 'Krona One', sans-serif;
 }
 
 .form-group input {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-  
-}
-.titulo2{
-    text-align: center;
-    font-size: 25px;
-    background-color: #177c30;
-    color: #ccc;
-    opacity: 0.8;
-    width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
 }
 
-@media(max-width:600px){
-  .row img{
-    margin-top:5%;
+.titulo2 {
+  text-align: center;
+  font-size: 25px;
+  background-color: #177c30;
+  color: #ccc;
+  opacity: 0.8;
+  width: 100%;
+  font-family: 'Krona One', sans-serif;
+}
+
+@media(max-width:600px) {
+  .row img {
+    margin-top: 5%;
     margin-bottom: 5%;
   }
 
