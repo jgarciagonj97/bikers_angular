@@ -13,6 +13,16 @@ img {
   cursor: pointer;
 }
 
+.vacio{
+  width: 100%;
+  text-align: center;
+  margin: 3% auto;
+  font-size: 2.5em;
+  color:rgb(109, 109, 109);
+  font-family: monospace; 
+  font-style: italic;
+}
+
 .card {
   margin: 4%; 
   border: none;
@@ -119,6 +129,7 @@ img {
   color: white;
   text-decoration: none;
 }
+
 .post{
   cursor: pointer;
 }
@@ -126,4 +137,20 @@ img {
 .imagen{
   width: 100%;
   height: auto;
+}
+
+@media(max-width:600px){
+
+  .vacio{
+    font-size: 0.825em
+  }
+
+}
+
+@media (min-width:601px) and (max-width:1024px){
+
+  .vacio{
+    font-size: 1.5em;
+  }
+
 }

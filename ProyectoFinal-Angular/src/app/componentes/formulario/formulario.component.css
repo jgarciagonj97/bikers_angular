@@ -1,3 +1,7 @@
+.formulario{
+    min-height: 85vh;
+}
+ 
 input.ng-valid.ng-touched{
     border: 2px solid greenyellow;
 }
