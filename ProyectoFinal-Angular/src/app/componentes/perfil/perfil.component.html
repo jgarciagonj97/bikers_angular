@@ -37,6 +37,11 @@
                         <label>Ciudad</label>
                         <input type="text" name="ciudad" formControlName="ciudad" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                            formControlName="archivo" (change)="cambioArchivo($event)">
+                    </div>
                     <input type="hidden" formControlName="id">
                     <input type="hidden" formControlName="password">
                     <input type="submit" class="btn btn-primary btn-small m-1" value="Guardar">

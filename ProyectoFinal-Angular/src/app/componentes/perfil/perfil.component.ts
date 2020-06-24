@@ -5,6 +5,7 @@ import { PostService } from 'src/app/servicios/post.service';
 import Swal from 'sweetalert2';
 import { SeguidoresService } from 'src/app/servicios/seguidores.service';
 import { Seguidor } from 'src/app/models/seguidor.model';
+import { FirebaseStorageService } from 'src/app/servicios/firebase-storage.service';
 
 @Component({
   selector: 'app-perfil',
@@ -18,11 +19,15 @@ export class PerfilComponent implements OnInit {
   arrSiguiendo: Seguidor[];
   seguidores: number;
   siguiendo: number;
+  datosFormulario: FormData;
+  nombreArchivo: string;
+  URLPublica: string;
 
   constructor(
     private userService: UsersService,
     private postService: PostService,
-    private seguidoresService: SeguidoresService
+    private seguidoresService: SeguidoresService,
+    private firebaseStorage: FirebaseStorageService
   ) {
     this.user = {};
     this.formUpdate = new FormGroup({
@@ -38,6 +43,9 @@ export class PerfilComponent implements OnInit {
     this.seguidores = 0;
     this.siguiendo = 0;
     this.arrSiguiendo = new Array;
+    this.datosFormulario = new FormData();
+    this.nombreArchivo = '';
+    this.URLPublica = '';
   }
 
   async ngOnInit() {
@@ -62,9 +70,10 @@ export class PerfilComponent implements OnInit {
 
   async onSubmit() {
     console.log(this.formUpdate.value)
-    const response = await this.userService.actualizarPerfil(
-      this.formUpdate.value
-    );
+    // const response = await this.userService.actualizarPerfil(
+    //   this.formUpdate.value
+    // );
+    const response = this.subirArchivo();
     if (response['success']) {
       Swal.fire({
         icon: 'success',
@@ -73,4 +82,29 @@ export class PerfilComponent implements OnInit {
       });
     }
   }
+
+  cambioArchivo(event) {
+    if (event.target.files.length > 0) {
+      for (let i = 0; i < event.target.files.length; i++) {
+        this.nombreArchivo = event.target.files[i].name;
+        this.datosFormulario.delete('archivo');
+        this.datosFormulario.append('archivo', event.target.files[i], event.target.files[i].name)
+      }
+    }
+  }
+
+  async subirArchivo() {
+    let archivo = this.datosFormulario.get('archivo');
+    let referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo);
+    this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
+    referencia.getDownloadURL().subscribe(async (URL) => {
+      this.URLPublica = URL;
+      this.formUpdate.value.archivo = this.URLPublica;
+      console.log(this.URLPublica);
+      console.log(this.formUpdate.value);
+      //console.log(this.formulario.value.archivo = this.URLPublica);
+      await this.userService.actualizarPerfil(this.formUpdate.value);
+    });
+  }
+
 }
