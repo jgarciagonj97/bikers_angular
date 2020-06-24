@@ -7,9 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class LoginService {
 
   baseUrl: string;
+  registroValor: boolean;
 
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'https://bikers1.herokuapp.com';
+    this.registroValor = true;
     //this.baseUrl = 'http://localhost:3000';
   }
 
@@ -27,6 +29,14 @@ export class LoginService {
 
   login(formValues): Promise<any> {
     return this.httpClient.post(`${this.baseUrl}/api/users/login`, formValues).toPromise();
+  }
+
+  setRegistro(boolean){
+    console.log(boolean)
+    this.registroValor = boolean;
+  }
+  getRegistro(){
+    return this.registroValor;
   }
 
 }
