@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LoginService } from 'src/app/servicios/login.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   formRegistro: FormGroup;
   mailAct: boolean;
   usernameAct: boolean;
+  
 
   constructor(private loginService: LoginService, private router: Router) {
     this.formRegistro = new FormGroup({

@@ -1,8 +1,64 @@
 .container{
     border: 2px solid black;
-    
+    margin-top: 4.18em;
     padding: 20px;
 }
 .container input{
     margin: 20px 0;
+}
+.cabecera{
+    text-align: center;
+    background-color: #25232A
+}
+.logo{
+    width: 6.250em;
+    height: auto;
+}
+
+.logo2{
+    width: 6.250em;
+    height: auto;
+}
+
+.letras{
+    margin-left: 6.250em;
+    margin-right: 6.250em;
+}
+.grupo {
+    padding: 0 ;
+}
+
+.grupo li {
+    display: block;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #25232A;
+    color: #37A88B; 
+    float: left ;
+    width: 100%;
+    margin-bottom: 2em;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+@media (max-width: 600px) {
+
+  .logo{
+      display: none;
+  }
+
+  .letras{
+      display: none;
+  }
+
+  .logo2{
+      width: 7.5em;
+  }
+
+  .grupo li{
+    font-size: 1.5em;
+  }
+
 }
