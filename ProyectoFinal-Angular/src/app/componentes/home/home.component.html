@@ -24,7 +24,8 @@
     <h2 class="text-center titulo">NOVEDADES</h2>
     <div class="row">
         <div class="col-xs-1 col-sm-1 col-md-1 ">
-            <button type="button" class="btn btn-primary postS" data-toggle="modal" data-target="#modal">CREAR POST</button>
+            <button type="button" class="btn btn-primary posts" data-toggle="modal" data-target="#modal">CREAR
+                POST</button>
             <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -74,7 +75,7 @@
 
     <div class="col-xs-10 col-sm-10 col-md-10 container mt-3">
 
-        <div class="d-flex justify-content-around mb-3 flex-wrap">
+        <div class="novedades">
             <!-- Meter ngFor con todos los posts. -->
             <div class="p-2 post col-xs-10 col-sm-10 col-md-10 mt-3 " *ngFor="let post of arrNovedades">
 
@@ -85,11 +86,11 @@
                     </p>
                 </div>
 
-        
+
                 <div class="autor">
                     <p>Autor: {{post.nombre}}</p>
                 </div>
-                
+
             </div>
         </div>
     </div>

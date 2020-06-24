@@ -7,9 +7,10 @@
 }
 
 .error{
-    color: red;
-    font-size: 0.825em;
-    font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.1); 
+  color: yellow;
+  font-size: 0.825em;
+  font-weight: 700;
 }
 
 .login-wrapper .login-btn {
