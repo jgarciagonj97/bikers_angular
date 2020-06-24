@@ -139,11 +139,18 @@ li i {
   .footer-copyright{
     font-size: 0.7em;
   }
-
+  .logo {
+   margin-left:1em ;
+  }
+  
 }
 
 @media (min-width: 601px) and (min-width: 601px){
     .navbar-nav{
       margin-top: 1.2em;
     }
+    .logo {
+      margin-left:1em ;
+     }
+     
 } 

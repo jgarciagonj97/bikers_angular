@@ -10,3 +10,11 @@ input.ng-invalid.ng-touched{
     color: red;
     font-size: 0.825em;
 }
+.titulo h2 {
+    text-align: center;
+    font-size: 50px;
+    background-color: #25232A;
+    color: #ccc;
+    opacity: 0.8;
+    width: 100%;
+  }
