@@ -2,19 +2,12 @@
   <header *ngIf="this.router.url!=='/principal'">
     <!-- Menu de navegacion -->
 
-    
+    <img class="logo" src="assets/img/bikers_logo_blanco.png" [routerLink]="['/home']">
     <!--  <h1 class="logo">BIKERS</h1> -->
     <nav class="navbar navbar-expand-lg">
-      <img class="logo" src="assets/img/bikers_logo_blanco.png" [routerLink]="['/home']">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon navbar-inverse"><i class="fa fa-bars hamburguesa" aria-hidden="true"></i>
-        </span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link line" [routerLink]="['/home']" routerLinkActive="activa">HOME</a></li>
-          <li class="nav-item"><a class="nav-link line" [routerLink]="['/blog']" routerLinkActive="activa">BLOG</a></li>
+      <ul class="nav_menu mr-auto">
+        <li class="nav-item"><a class="nav-link line" [routerLink]="['/home']" routerLinkActive="activa">HOME</a></li>
+        <li class="nav-item"><a class="nav-link line" [routerLink]="['/blog']" routerLinkActive="activa">BLOG</a></li>
         <li class="nav-item"><a class="nav-link line" [routerLink]="['/browser']" routerLinkActive="activa">BUSCADOR</a>
         </li>
         <li class="nav-item"><a class="nav-link line" [routerLink]="['/profile']" routerLinkActive="activa">PERFIL</a>
@@ -29,9 +22,7 @@
           <a class="nav-link" (click)="onClick()"><button class="logout"><i
                 class="fas fa-sign-out-alt"></i></button></a>
         </li>
-        </ul>
-        
-      </div>
+      </ul>
     </nav>
   </header>
   <!-- main -->
