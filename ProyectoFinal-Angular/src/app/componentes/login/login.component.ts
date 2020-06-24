@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { LoginService } from 'src/app/servicios/login.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
   formPassword: FormGroup;
+   
 
   constructor(private loginservice: LoginService, private router: Router, private postService: PostService, private usersService: UsersService) {
     this.formLogin = new FormGroup({
@@ -75,9 +76,9 @@ export class LoginComponent implements OnInit {
     for (let usuario of arrUsuarios) {
       if (usuario.email === this.formPassword.value.email) {
         existe = true;
-      } 
+      }
     }
-    if (existe===false) {
+    if (existe === false) {
       Swal.fire({
         icon: 'error',
         title: '¡Email no registrado!',
@@ -94,5 +95,9 @@ export class LoginComponent implements OnInit {
       this.formPassword.reset();
     }
     this.formPassword.reset();
+  }
+
+  registrate() {
+   /* Intentar mostrar el apartado "registrate" */
   }
 }

@@ -10,10 +10,11 @@
     </ul>
 
     <div class="content">
-        <div id="register" *ngIf="!registro">
+        <div id="register" *ngIf="!registroValor">
             <app-register></app-register>
         </div>
-        <div id="login" *ngIf="registro">
+        <div id="login" *ngIf="registroValor"> 
+             
             <app-login></app-login>
         </div>
     </div>
