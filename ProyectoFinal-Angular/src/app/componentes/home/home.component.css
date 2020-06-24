@@ -69,9 +69,7 @@
 
 .cuerpo .texto{
     width: 55%;
-    text-align: justify;
-    padding: 3.125em; 
-    
+    padding-left: 3.125em; 
 }
 
 .container{
@@ -130,7 +128,8 @@ li{
     }
 
     .post{
-        width:100%;
+        width:90%;
+        margin: 0 auto;
     }
 
     .titulo2{
@@ -148,6 +147,7 @@ li{
 
     .cuerpo .texto{
         width: 100%;
+        padding: 0;
     }
 
 }
