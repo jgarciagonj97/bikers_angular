@@ -31,12 +31,20 @@ button {
 
 header .navbar{
   background-color: #24252a;
+  display: flex;
+  
 }
+
 
 .hamburguesa{
   font-size: 1.250em;
 }
 
+.navbar ul li{
+  text-align: center;
+  padding-bottom: 15px;
+  
+}
 
 
 .nav_menu li .line:hover{

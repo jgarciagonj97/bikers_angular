@@ -8,13 +8,13 @@
                     <li data-target="#carrusel" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" >
+                    <div class="carousel-item active">
                         <img class="d-block w-100" src="../../../assets/img/carrusel/imagen1.jpg" alt="">
                     </div>
-                    <div class="carousel-item" >
+                    <div class="carousel-item">
                         <img class="d-block w-100" src="../../../assets/img/carrusel/imagen4.jpg" alt="">
                     </div>
-                    <div class="carousel-item" >
+                    <div class="carousel-item">
                         <img class="d-block w-100" src="../../../assets/img/carrusel/imagen3.jpg" alt="">
                     </div>
                 </div>
@@ -31,8 +31,8 @@
     </div>
     <h2 class="text-center titulo">NOVEDADES</h2>
     <div class="row">
-        <div class="col-xs-1 col-sm-1 col-md-1 ">
-            <button type="button" class="btn btn-primary postS" data-toggle="modal" data-target="#modal">CREAR POST</button>
+        <div class="col-xs-2 col-sm-2 col-md-2 ml-auto">
+            <button type="button" class="btn btn-outline-info posts " data-toggle="modal" data-target="#modal">CREAR POST</button>
             <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -82,7 +82,7 @@
 
     <div class="col-xs-10 col-sm-10 col-md-10 container mt-3">
 
-        <div class="d-flex justify-content-around mb-3 flex-wrap">
+        <div class="novedades">
             <!-- Meter ngFor con todos los posts. -->
             <div class="p-2 post col-xs-10 col-sm-10 col-md-10 mt-3 " *ngFor="let post of arrNovedades">
 
@@ -93,11 +93,11 @@
                     </p>
                 </div>
 
-        
+
                 <div class="autor">
                     <p>Autor: {{post.nombre}}</p>
                 </div>
-                
+
             </div>
         </div>
     </div>
