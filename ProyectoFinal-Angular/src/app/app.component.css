@@ -3,6 +3,12 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Permanent Marker', cursive; */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Rubik+Mono+One&display=swap');
+
+/* font-family: 'Krona One', sans-serif;
+font-family: 'Rubik Mono One', sans-serif; */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,6 +24,7 @@ button {
   font-size: 19px;
   color: #edf0f1;
   text-decoration: none;
+  font-family: 'Krona One', sans-serif
 }
 
 
@@ -40,10 +47,15 @@ header .navbar{
   font-size: 1.250em;
 }
 
-.navbar ul li{
+.navbar ul li {
   text-align: center;
   padding-bottom: 15px;
-  
+
+
+}
+.navbar .line{
+  padding:0.438em;
+
 }
 
 
@@ -140,7 +152,7 @@ li i {
     font-size: 0.7em;
   }
   .logo {
-   margin-left:1em ;
+   margin-left:3em ;
   }
   
 }
@@ -150,7 +162,7 @@ li i {
       margin-top: 1.2em;
     }
     .logo {
-      margin-left:1em ;
+      margin-left:3em ;
      }
      
 } 
