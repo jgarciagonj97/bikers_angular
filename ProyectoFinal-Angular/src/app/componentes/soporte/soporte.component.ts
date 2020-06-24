@@ -24,7 +24,6 @@ export class SoporteComponent implements OnInit {
   ngOnInit(): void {
   }
   async contactForm(form) {
-
     console.log(form);
     console.log('Entra en la petición');
     Swal.fire({
@@ -36,23 +35,7 @@ export class SoporteComponent implements OnInit {
     this.userService.mandarEmail(form);
   }
 
-  onSubmit() {
+  
 
-  }
-
-  onClick($event) {
-    $('#collapseOne').toggle(300);
-    $('#collapseTwo').hide(300);
-    $('#collapseThree').hide(300);
-  }
-  onClick2($event) {
-    $('#collapseOne').hide(300)
-    $('#collapseTwo').toggle(300);
-    $('#collapseThree').hide(300);
-  }
-  onClick3($event) {
-    $('#collapseOne').hide(300);
-    $('#collapseTwo').hide(300);
-    $('#collapseThree').toggle(300);
-  }
+  
 }
