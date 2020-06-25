@@ -15,9 +15,11 @@ export class RegisterComponent implements OnInit {
   formRegistro: FormGroup;
   mailAct: boolean;
   usernameAct: boolean;
-  
+  imagen: string;
+
 
   constructor(private loginService: LoginService, private router: Router) {
+    this.imagen = 'https://static.vecteezy.com/system/resources/previews/000/550/731/non_2x/user-icon-vector.jpg';
     this.formRegistro = new FormGroup({
       nombre: new FormControl('', [
         Validators.required
@@ -39,7 +41,8 @@ export class RegisterComponent implements OnInit {
       ]),
       ciudad: new FormControl('', [
         Validators.required
-      ])
+      ]),
+      imagen: new FormControl(this.imagen)
     })
   }
 

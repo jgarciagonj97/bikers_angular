@@ -15,11 +15,11 @@
     <div class="usuarios mb-1">
         <p class="personas">Personas</p>
         <div class="row m-1 marco" *ngFor="let user of arrFiltrados">
-            <div class="col-3 col-md-1 fotoperfil">
-                <img src="../../../assets/img/usuario.jpg">
+            <div class="col-3 col-md-2 fotoperfil">
+                <img [src]="user.imagen">
             </div>
 
-            <div class="col-7 col-md-9">
+            <div class="col-7 col-md-8">
                 <h6 class="nombre">{{user.nombre}}</h6>
                 <p class="apellidos">{{user.apellidos}}</p>
                 <p class="ciudad">{{user.ciudad}}</p>

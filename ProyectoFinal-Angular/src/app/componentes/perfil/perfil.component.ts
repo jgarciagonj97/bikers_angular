@@ -70,20 +70,21 @@ export class PerfilComponent implements OnInit {
     console.log(this.seguidores, this.siguiendo);
   }
 
-  async onSubmit() {
-    console.log(this.formUpdate.value)
-    // const response = await this.userService.actualizarPerfil(
-    //   this.formUpdate.value
-    // );
-    const response = this.subirArchivo();
-    if (response['success']) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Hecho',
-        text: 'Has actualizado el perfil',
-      });
-    }
-  }
+  // async onSubmit() {
+  //   console.log(this.formUpdate.value)
+  //   // const response = await this.userService.actualizarPerfil(
+  //   //   this.formUpdate.value
+  //   // );
+  //   const response = this.subirArchivo();
+  //   console.log(response);
+  //   if (response['success']) {
+  //     Swal.fire({
+  //       icon: 'success',
+  //       title: 'Hecho',
+  //       text: 'Has actualizado el perfil',
+  //     });
+  //   }
+  // }
 
   cambioArchivo(event) {
     if (event.target.files.length > 0) {
@@ -95,7 +96,7 @@ export class PerfilComponent implements OnInit {
     }
   }
 
-  async subirArchivo() {
+  async onSubmit() {
     let archivo = this.datosFormulario.get('archivo');
     let referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo);
     this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
@@ -105,7 +106,14 @@ export class PerfilComponent implements OnInit {
       console.log(this.URLPublica);
       console.log(this.formUpdate.value);
       //console.log(this.formulario.value.archivo = this.URLPublica);
-      await this.userService.actualizarPerfil(this.formUpdate.value);
+      const response = await this.userService.actualizarPerfil(this.formUpdate.value);
+      if (response['success']) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Hecho',
+          text: 'Has actualizado el perfil',
+        });
+      }
     });
   }
 
