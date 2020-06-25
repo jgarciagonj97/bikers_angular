@@ -32,20 +32,20 @@ export class UsersService {
     return this.httpClient.post(`${this.baseUrl}/api/sendEmail`, body).toPromise()
   }
 
-  getIdByEmail(email){
+  getIdByEmail(email) {
     return this.httpClient.get(`${this.baseUrl}/api/users/id/${email}`).toPromise();
   }
 
-  async cambiarPassword(pEmail,pPassword){
+  async cambiarPassword(pEmail, pPassword) {
     const id = await this.getIdByEmail(pEmail)
     console.log(pEmail)
     console.log(pPassword)
-    return this.httpClient.put(`${this.baseUrl}/api/users/password/${id[0].id}`,pPassword).toPromise();
+    return this.httpClient.put(`${this.baseUrl}/api/users/password/${id[0].id}`, pPassword).toPromise();
   }
 
-  resetPassword(pEmail){
+  resetPassword(pEmail) {
     console.log('Entra en reset', pEmail);
-    return this.httpClient.post(`${this.baseUrl}/api/recuperar`,pEmail).toPromise();
+    return this.httpClient.post(`${this.baseUrl}/api/recuperar`, pEmail).toPromise();
   }
 
 

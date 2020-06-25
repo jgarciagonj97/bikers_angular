@@ -37,7 +37,8 @@ export class PerfilComponent implements OnInit {
       username: new FormControl(''),
       ciudad: new FormControl(''),
       id: new FormControl(''),
-      password: new FormControl('')
+      password: new FormControl(''),
+      archivo: new FormControl('')
     });
     this.arrSeguidores = new Array;
     this.seguidores = 0;
@@ -59,7 +60,8 @@ export class PerfilComponent implements OnInit {
       username: new FormControl(this.user.username),
       ciudad: new FormControl(this.user.ciudad),
       id: new FormControl(this.user.id),
-      password: new FormControl(this.user.password)
+      password: new FormControl(this.user.password),
+      archivo: new FormControl(this.user.imagen)
     });
     this.arrSeguidores = await this.seguidoresService.seguidores();
     for (let seguidor of this.arrSeguidores) this.seguidores++;
