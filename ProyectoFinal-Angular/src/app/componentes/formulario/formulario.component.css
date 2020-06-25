@@ -28,3 +28,15 @@ input.ng-invalid.ng-touched{
 .bici2{
     width:100%
 }
+
+.formulario label{
+    
+    color: #37a88b;
+    font-weight: bold;
+    margin-bottom: 15px;
+    
+}
+.formularioC{
+    background-color: rgb(243, 241, 241);
+    margin-bottom: 2em;
+}

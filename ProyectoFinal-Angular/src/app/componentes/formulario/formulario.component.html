@@ -4,12 +4,12 @@
     </h2>
 </div>
 <!-- titulo, descripcion, autor -->
-<div class="col-md-8 mt-5">
-    <div class="formulario">
+<div class="col-md-6 mt-5 mx-auto formularioC">
+    <div class="formulario ">
         <form [formGroup]="formulario" (ngSubmit)="subirArchivo()" enctype=" multipart/form-data">
             <div class="form-group row">
-                <label for="staticEmail" class="col-md-1 col-sm-12 col-sm-12 col-form-label">Titulo</label>
-                <div class="col-md-11 col-sm-12 col-xs-12">
+                <label class="col-md-12 col-sm-12 col-sm-12 col-form-label">Titulo</label>
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <input type="text" class="form-control" placeholder="Introduce un Titulo a tu post"
                         formControlName="titulo">
                 </div>
@@ -18,8 +18,8 @@
                     El campo título es requerido y debe tener una longitud minima de 5 caracteres</p>
             </div>
             <div class="form-group row">
-                <label class="col-md-1 col-form-label">Texto</label>
-                <div class="col-md-11">
+                <label class="col-md-12 col-form-label">Texto</label>
+                <div class="col-md-12">
                     <textarea type="text" class="form-control" placeholder="Cuerpo del articulo"
                         formControlName="texto"></textarea>
                 </div>
@@ -28,11 +28,11 @@
                     El campo texto es obligatorio y debe tener una longitud de entre 10 y 100 caracteres</p>
             </div>
             <div class="form-group row">
-                <label class="col-md-1 col-form-label">Fecha</label>
-                <div class="col-md-11 mt-2">A fecha de {{fechaActual|date:'dd-MM-yyyy'}}</div>
+                <label class="col-md-12 col-form-label">Fecha</label>
+                <div class="col-md-11 mt-2 l">A fecha de {{fechaActual|date:'dd-MM-yyyy'}}</div>
             </div>
             <div class="form-group row">
-                <label class="col-md-1 col-form-label">Imagen</label>
+                <label class="col-md-12 col-form-label">Imagen</label>
                 <div class="col-md-11">
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" formControlName="archivo"
                         (change)="cambioArchivo($event)">
