@@ -26,8 +26,7 @@ export class FormularioComponent implements OnInit {
       ]),
       texto: new FormControl('', [
         Validators.required,
-        Validators.minLength(10),
-        Validators.maxLength(2000),
+        Validators.minLength(100),
       ]),
       archivo: new FormControl(''),
       fecha: new FormControl((this.fechaActual = new Date())),
@@ -38,7 +37,7 @@ export class FormularioComponent implements OnInit {
     // this.fechaActual = new Date();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   //Evento que se gatilla cuando el input de tipo archivo cambia
   cambioArchivo(event) {
