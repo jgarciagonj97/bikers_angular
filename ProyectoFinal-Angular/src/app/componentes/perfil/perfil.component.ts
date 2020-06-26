@@ -22,6 +22,7 @@ export class PerfilComponent implements OnInit {
   datosFormulario: FormData;
   nombreArchivo: string;
   URLPublica: string;
+  puede: boolean;
 
   constructor(
     private userService: UsersService,
@@ -29,6 +30,7 @@ export class PerfilComponent implements OnInit {
     private seguidoresService: SeguidoresService,
     private firebaseStorage: FirebaseStorageService
   ) {
+    this.puede = false;
     this.user = {};
     this.formUpdate = new FormGroup({
       nombre: new FormControl(''),
@@ -61,7 +63,7 @@ export class PerfilComponent implements OnInit {
       ciudad: new FormControl(this.user.ciudad),
       id: new FormControl(this.user.id),
       password: new FormControl(this.user.password),
-      imagen: new FormControl(this.user.imagen)
+      imagen: new FormControl('')
     });
     this.arrSeguidores = await this.seguidoresService.seguidores();
     for (let seguidor of this.arrSeguidores) this.seguidores++;
@@ -93,6 +95,7 @@ export class PerfilComponent implements OnInit {
         this.datosFormulario.delete('imagen');
         this.datosFormulario.append('imagen', event.target.files[i], event.target.files[i].name)
       }
+      this.puede = true;
     }
   }
 

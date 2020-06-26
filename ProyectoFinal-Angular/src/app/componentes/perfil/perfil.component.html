@@ -41,10 +41,11 @@
                         <label>Imagen</label>
                         <input type="file" class="form-control-file" id="exampleFormControlFile1"
                             formControlName="imagen" (change)="cambioArchivo($event)">
+                        <p *ngIf="!puede" class="error">Debes seleccionar una imagen para actualizar el perfil</p>
                     </div>
                     <input type="hidden" formControlName="id">
                     <input type="hidden" formControlName="password">
-                    <input type="submit" class="btn btn-primary btn-small m-1" value="Guardar">
+                    <input type="submit" class="btn btn-primary btn-small m-1" value="Guardar" [disabled]='!puede'>
                 </form>
 
             </div>

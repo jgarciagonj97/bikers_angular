@@ -64,6 +64,11 @@ form div {
   background-color: rgb(230, 101, 78);
 }
 
+.error{
+    color: red;
+    font-size: 0.825em;
+}
+
 
 @media(max-width:767px) {
   .row img {
@@ -74,6 +79,10 @@ form div {
   .row .datos {
     margin-bottom: 0.50em;
   }
+
+  .error{
+    font-size: 0.7em;
+}
   
 
 }
