@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
         Validators.pattern(/^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/)
       ]),
       password: new FormControl('', [
-        Validators.required
+       Validators.pattern(/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/)
       ]),
       ciudad: new FormControl('', [
         Validators.required

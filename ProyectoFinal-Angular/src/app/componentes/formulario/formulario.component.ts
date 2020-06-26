@@ -6,30 +6,31 @@ import { BlogService } from 'src/app/servicios/blog.service';
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css']
+  styleUrls: ['./formulario.component.css'],
 })
-
 export class FormularioComponent implements OnInit {
-
   formulario: FormGroup;
   datosFormulario: FormData;
   nombreArchivo: string;
   URLPublica: string;
   fechaActual: Date;
 
-  constructor(private firebaseStorage: FirebaseStorageService, private blogservice: BlogService) {
+  constructor(
+    private firebaseStorage: FirebaseStorageService,
+    private blogservice: BlogService
+  ) {
     this.formulario = new FormGroup({
-      titulo: new FormControl("", [
+      titulo: new FormControl('', [
         Validators.required,
-        Validators.minLength(5)
+        Validators.minLength(5),
       ]),
-      texto: new FormControl("", [
+      texto: new FormControl('', [
         Validators.required,
         Validators.minLength(10),
-        Validators.maxLength(100)
+        Validators.maxLength(2000),
       ]),
       archivo: new FormControl(''),
-      fecha: new FormControl(this.fechaActual = new Date())
+      fecha: new FormControl((this.fechaActual = new Date())),
     });
     this.datosFormulario = new FormData();
     this.nombreArchivo = '';
@@ -37,8 +38,7 @@ export class FormularioComponent implements OnInit {
     // this.fechaActual = new Date();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   //Evento que se gatilla cuando el input de tipo archivo cambia
   cambioArchivo(event) {
@@ -46,7 +46,11 @@ export class FormularioComponent implements OnInit {
       for (let i = 0; i < event.target.files.length; i++) {
         this.nombreArchivo = event.target.files[i].name;
         this.datosFormulario.delete('archivo');
-        this.datosFormulario.append('archivo', event.target.files[i], event.target.files[i].name)
+        this.datosFormulario.append(
+          'archivo',
+          event.target.files[i],
+          event.target.files[i].name
+        );
       }
     }
   }
@@ -54,7 +58,9 @@ export class FormularioComponent implements OnInit {
   //Sube el archivo a Cloud Storage
   async subirArchivo() {
     let archivo = this.datosFormulario.get('archivo');
-    let referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo);
+    let referencia = this.firebaseStorage.referenciaCloudStorage(
+      this.nombreArchivo
+    );
     this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
     referencia.getDownloadURL().subscribe(async (URL) => {
       this.URLPublica = URL;
@@ -66,5 +72,4 @@ export class FormularioComponent implements OnInit {
       this.formulario.reset();
     });
   }
-
 }
