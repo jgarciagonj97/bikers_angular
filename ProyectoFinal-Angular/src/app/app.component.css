@@ -21,7 +21,7 @@ li,
 a,
 button {
   font-weight: 700;
-  font-size: 19px;
+  font-size: 1em;
   color: #edf0f1;
   text-decoration: none;
   font-family: 'Krona One', sans-serif
@@ -55,17 +55,17 @@ header .navbar{
   padding:0.438em;
 }
 
-.nav_menu li .line:hover{
+.navbar-nav li .line:hover{
   border-bottom: 2px solid #37a88b;
 }
 
-.nav_menu li a:hover {
+.navbar-nav li a:hover {
   color: #37a88b;
 }
 
 .activa{
   color: #37a88b;
-  border-bottom: 2px solid #37a88b;
+ 
 }
 
 button {
@@ -77,7 +77,7 @@ button {
 }
 
 .contact {
-  background-color: rgba(15, 183, 224);
+  background-color: rgba(16, 140, 172, 0.8);
 }
 
 .logout{
@@ -87,6 +87,13 @@ button {
 
 .logout i{
   color: #edf0f1;
+  font-size: 1.75em;
+  transition: all 0.3s ease 0s;
+  
+}
+
+.logout i:hover{
+  color: #af3939;
 }
 
 .contact:hover {
@@ -94,11 +101,11 @@ button {
 }
 
 .newpost {
-  background-color: rgb(32, 202, 103);
+  background-color: rgba(18, 146, 97, 0.8);
 }
 
 .newpost:hover {
-  background-color: rgba(18, 146, 97, 0.8);
+  background-color: rgba(48, 212, 149, 0.8);
 }
 
 .footer {
