@@ -6,12 +6,12 @@
             <p>{{post?.texto}}</p>
         </div>
     </div>
-    <div class="relacionados row">
+    <div class="relacionados row mx-auto">
         <div class="articulo" (click)="clickPost(post?.id)" *ngFor="let post of arrRelacionados">
             <img src={{post?.imagen}}>
             <h4>{{post?.titulo}}</h4>
         </div>
-</div>
-        
-    
+    </div>
+
+
 </div>
