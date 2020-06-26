@@ -38,7 +38,7 @@ export class PerfilComponent implements OnInit {
       ciudad: new FormControl(''),
       id: new FormControl(''),
       password: new FormControl(''),
-      archivo: new FormControl('')
+      imagen: new FormControl('')
     });
     this.arrSeguidores = new Array;
     this.seguidores = 0;
@@ -61,7 +61,7 @@ export class PerfilComponent implements OnInit {
       ciudad: new FormControl(this.user.ciudad),
       id: new FormControl(this.user.id),
       password: new FormControl(this.user.password),
-      archivo: new FormControl(this.user.imagen)
+      imagen: new FormControl(this.user.imagen)
     });
     this.arrSeguidores = await this.seguidoresService.seguidores();
     for (let seguidor of this.arrSeguidores) this.seguidores++;
@@ -90,19 +90,19 @@ export class PerfilComponent implements OnInit {
     if (event.target.files.length > 0) {
       for (let i = 0; i < event.target.files.length; i++) {
         this.nombreArchivo = event.target.files[i].name;
-        this.datosFormulario.delete('archivo');
-        this.datosFormulario.append('archivo', event.target.files[i], event.target.files[i].name)
+        this.datosFormulario.delete('imagen');
+        this.datosFormulario.append('imagen', event.target.files[i], event.target.files[i].name)
       }
     }
   }
 
   async onSubmit() {
-    let archivo = this.datosFormulario.get('archivo');
+    let imagen = this.datosFormulario.get('imagen');
     let referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo);
-    this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
+    this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, imagen);
     referencia.getDownloadURL().subscribe(async (URL) => {
       this.URLPublica = URL;
-      this.formUpdate.value.archivo = this.URLPublica;
+      this.formUpdate.value.imagen = this.URLPublica;
       console.log(this.URLPublica);
       console.log(this.formUpdate.value);
       //console.log(this.formulario.value.archivo = this.URLPublica);
